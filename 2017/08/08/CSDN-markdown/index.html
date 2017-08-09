@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VR, AR, unity, unity3d" />
+  <meta name="keywords" content="unity," />
 
 
 
@@ -95,6 +95,7 @@
 
 
 <meta name="description" content="今回はUnityを利用した数学的な話をしようと思います。 視錐台（Frustum）はカメラの見える範囲のことを指します。 視錐台とその構成3Dの世界はカメラから覗いて映像を捉えるのですが、そこでいう視錐台は下図の濃い黄色の部分の様に一部だけ切り抜いた範囲の事を指します。">
+<meta name="keywords" content="unity">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「Unity」視錐台についての勉強">
 <meta property="og:url" content="http://yoursite.com/2017/08/08/CSDN-markdown/index.html">
@@ -105,7 +106,7 @@
 <meta property="og:image" content="https://docs.unity3d.com/ja/current/StaticFiles/ScriptRefImages/Plane3Points.png">
 <meta property="og:image" content="http://logicalbeat.jp/wp-content/uploads/2016/11/Unity_Frustum2_plane6-300x181.png">
 <meta property="og:image" content="http://logicalbeat.jp/wp-content/uploads/2016/11/Unity_Frustum2_plane4-300x181.png">
-<meta property="og:updated_time" content="2017-08-09T01:46:01.143Z">
+<meta property="og:updated_time" content="2017-08-09T06:32:32.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「Unity」視錐台についての勉強">
 <meta name="twitter:description" content="今回はUnityを利用した数学的な話をしようと思います。 視錐台（Frustum）はカメラの見える範囲のことを指します。 視錐台とその構成3Dの世界はカメラから覗いて映像を捉えるのですが、そこでいう視錐台は下図の濃い黄色の部分の様に一部だけ切り抜いた範囲の事を指します。">
@@ -307,6 +308,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unity3d/" itemprop="url" rel="index">
+                    <span itemprop="name">unity3d</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -355,7 +378,7 @@
 <p><img src="http://logicalbeat.jp/wp-content/uploads/2016/11/Unity_Frustum2_plane6-300x181.png" alt="这里写图片描述"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://logicalbeat.jp/wp-content/uploads/2016/11/Unity_Frustum2_plane4-300x181.png" alt="这里写图片描述"></p>
 <p>幸いnear,far面はPlaneの配列の最後の2つなので、下のようにリサイズして4つにすると良いでしょう。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 視錐台平面を獲得</div><div class="line">Plane[]	planes = GeometryUtility.CalculateFrustumPlanes( camera );</div><div class="line">System.Array.Resize( ref planes, 4 );		// near,far面を排除</div><div class="line"></div><div class="line">// 内外判定</div><div class="line">if ( GeometryUtility.TestPlanesAABB( planes, bounds ) ) &#123;</div><div class="line">	// 入った！！</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>これで内外判定が効率よく行えました。<br>  <div class="comments" id="comments"><br>    <div id="gitment-container"></div><br>  </div></p>
+<p>これで内外判定が効率よく行えました。  </p>
 <p><div id="container"></div></p>
 <p><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"></p>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
@@ -369,7 +392,7 @@ var gitment = new Gitment({
     client_secret: 'bd1b325ac8f1517fe0e93eae9ab238b16fcfc1a5',
   },
 })
-gitment.render('gitment-container')
+gitment.render('container')
 </script>
       
     </div>
@@ -392,6 +415,12 @@ gitment.render('gitment-container')
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/unity/" rel="tag"># unity</a>
+          
+        </div>
       
 
       
@@ -428,6 +457,29 @@ gitment.render('gitment-container')
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
       
     </div>
   </div>
@@ -485,7 +537,25 @@ gitment.render('gitment-container')
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">カテゴリ</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">タグ</span>
+              
+            </div>
           
 
         </nav>
@@ -493,6 +563,52 @@ gitment.render('gitment-container')
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jlsgkid/" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://pixiv.me/jlsgkid" target="_blank" title="Pixiv">
+                  
+                    <i class="fa fa-fw fa-paint-brush"></i>
+                  
+                    
+                      Pixiv
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/jlsgkid" target="_blank" title="CSDN Blog">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                    
+                      CSDN Blog
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="jlsgkid704@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
           
         </div>
 
@@ -509,15 +625,7 @@ gitment.render('gitment-container')
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://www.bilibili.com" title="bilibili" target="_blank">bilibili</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://pixiv.me/jlsgkid" title="My Pixiv" target="_blank">My Pixiv</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://blog.csdn.net/jlsgkid" title="My CSDN Blog" target="_blank">My CSDN Blog</a>
+                  <a href="https://www.bilibili.com" title="Bilibili" target="_blank">Bilibili</a>
                 </li>
               
             </ul>
@@ -543,7 +651,13 @@ gitment.render('gitment-container')
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Number of visitors: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
@@ -564,6 +678,8 @@ gitment.render('gitment-container')
     NexT.Pisces
   </a>
 </div>
+
+
 
 
         
