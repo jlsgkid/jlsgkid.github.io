@@ -368,7 +368,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><p>今回はUnityを利用した数学的な話をしようと思います。</p>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>今回はUnityを利用した数学的な話をしようと思います。</p>
 <p><font color="red">視錐台</font>（Frustum）はカメラの見える範囲のことを指します。</p>
 <p><strong>視錐台とその構成</strong><br>3Dの世界はカメラから覗いて映像を捉えるのですが、そこでいう視錐台は下図の濃い黄色の部分の様に一部だけ切り抜いた範囲の事を指します。</p>
 <p><img src="http://logicalbeat.jp/wp-content/uploads/2016/11/Unity_Frustum1_overview-300x181.png" alt="这里写图片描述"><br><a id="more"></a><br>左下がカメラになっていて、そこから視界が広がるイメージです。<br>そして最終的には台形が立体になったもの（「四角錐台」と呼びます）の形になりますが、特徴的なのがカメラから見て手前と奥が切れているところです。<br>手前側が「Camera.nearClipPlane」になり、奥側が「Camera.farClipPlane」となります。<br>その際にこの「面」の概念が必要になってきますが、Unityではそれを獲得する関数が存在します。<br>以下になります。<br><a href="public%20static%20Plane%5B%5D%20GeometryUtility.CalculateFrustumPlanes%28Camera%20camera%29">public static Plane[] GeometryUtility.CalculateFrustumPlanes(Camera camera)</a><br>この関数に「Camera」を渡すと、面に相当する「Plane」の配列が返ってきます。<br>6面あるので6要素の配列になり、それぞれが各面に対応しています。</p>
@@ -432,6 +432,10 @@ gitment.render('container')
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/10/music/" rel="prev" title="BGM">
+                BGM <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -522,7 +526,7 @@ gitment.render('container')
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
