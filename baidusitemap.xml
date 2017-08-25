@@ -4,15 +4,35 @@
 
     
   <url>
-    <loc>http://www.jlsgkid.com/2017/08/24/hello-world/</loc>
-    <lastmod>2017-08-25T03:46:14.525Z</lastmod>
+    <loc>http://www.jlsgkid.com/2017/07/25/hello-world/</loc>
+    <lastmod>2017-08-25T07:26:00.113Z</lastmod>
     <data>
         <display>
         <title>Hexo</title>
-        <pubTime>2017-08-24T06:11:11.782Z</pubTime>
+        <pubTime>2017-07-25T09:31:16.000Z</pubTime>
         
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/25/20170825_Vuforia/</loc>
+    <lastmod>2017-08-25T07:25:42.853Z</lastmod>
+    <data>
+        <display>
+        <title>Unity3D＋VuforiaAPI＋音声認識</title>
+        <pubTime>2017-08-25T09:31:16.000Z</pubTime>
+        
+        <tag>unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="unity3d" url="http://www.jlsgkid.com/categories/unity3d/"/>
+          
         </display>
     </data>
     </url>
