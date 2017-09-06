@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VR, AR, unity, unity3d" />
+  <meta name="keywords" content="unity," />
 
 
 
@@ -98,13 +98,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="仮想と拡張現実">
-<meta property="og:url" content="http://www.jlsgkid.com/archives/page/2/index.html">
+<meta name="description" content="今回タワー・ディフェンスゲームを作ってみます。迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。 防御ユニットの置き場はこういう感じです：">
+<meta name="keywords" content="unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Making a game in 48 hours -03">
+<meta property="og:url" content="http://www.jlsgkid.com/2017/09/04/TDGame/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
+<meta property="og:description" content="今回タワー・ディフェンスゲームを作ってみます。迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。 防御ユニットの置き場はこういう感じです：">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="http://img.blog.csdn.net/20170906072214015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170906072525672?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170906072749726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170906072822626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-06T04:22:59.953Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仮想と拡張現実">
+<meta name="twitter:title" content="Making a game in 48 hours -03">
+<meta name="twitter:description" content="今回タワー・ディフェンスゲームを作ってみます。迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。 防御ユニットの置き場はこういう感じです：">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170906072214015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -133,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/archives/page/2/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2017/09/04/TDGame/"/>
 
 
 
 
 
-  <title>アーカイブ | 仮想と拡張現実</title>
+  <title>Making a game in 48 hours -03 | 仮想と拡張現実</title>
   
 
 
@@ -164,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,231 +258,216 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/04/TDGame/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Making a game in 48 hours -03</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-04T15:31:16+09:00">
+                2017-09-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        うーん! 全 11 ポスト もっと書こう！
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unity3d/" itemprop="url" rel="index">
+                    <span itemprop="name">unity3d</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/26/RunWithColor/" itemprop="url">
-              
-                <span itemprop="name">Making a game in 48 hours -01</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-26T13:31:26+09:00"
-              content="2017-02-26" >
-          02-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
+             <span id="/2017/09/04/TDGame/" class="leancloud_visitors" data-flag-title="Making a game in 48 hours -03">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/12/23/CSDN-markdown/" itemprop="url">
-              
-                <span itemprop="name">「Unity」視錐台についての勉強</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-23T18:31:16+09:00"
-              content="2016-12-23" >
-          12-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/15/music/" itemprop="url">
-              
-                <span itemprop="name">BGM</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-15T16:10:09+09:00"
-              content="2016-08-15" >
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/01/April/" itemprop="url">
-              
-                <span itemprop="name">四月は君の嘘</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-01T04:01:01+09:00"
-              content="2016-04-01" >
-          04-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>今回タワー・ディフェンスゲームを作ってみます。<br>迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。<br>先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。</p>
+<p>防御ユニットの置き場はこういう感じです：<br><img src="http://img.blog.csdn.net/20170906072214015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<a id="more"></a>
+<p>じゃあ、次は敵の移動経路を作ります。<br><img src="http://img.blog.csdn.net/20170906072525672?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>起点と終点のところにCubeを置きます。<br>敵を特定ルート移動させることにつてはいろん方法があります。<br>今回はウェイポイント(Waypoint)を使います。動作の制御スクリプトを作成します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">positions = new Transform[this.transform.childCount];</div><div class="line">	for (int i = 0; i &lt; positions.Length; i++) &#123;</div><div class="line">		positions [i] = transform.GetChild (i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>敵はいろんな種類があります。敵のクラスを定義する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//各waypointのポジションを取得する。</div><div class="line">private Transform[] position;</div><div class="line">//waypointのインデスク</div><div class="line">private int index = 0;</div><div class="line">private int life = 100;</div><div class="line">[SerializeField] private float speed = 0.0f;</div><div class="line">void Move()&#123;</div><div class="line">	//移動方向の正規化されたときベクトを取得して、移動する</div><div class="line">	this.transform.Translate((position[index].position - transform.position).normalized </div><div class="line">       Time.deltaTime * speed);</div><div class="line">	if (Vector3.Distance (position [index].position, transform.position) &lt; 0.2f) &#123;</div><div class="line">		index++;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170906072749726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>Waveの定義。ゲームはWave（ウェーブ）という単位で行われる。<br>1つのWaveで登場する敵の種類は先ず4に設定する。Waveが始まると敵は起点から登場し、終点に向かって移動する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">EnemySpawner:</div><div class="line">IEnumerator SpawnEnemy()&#123;</div><div class="line">　　　//各Waveで設定される敵数によって敵を生成する。</div><div class="line">	foreach (Wave wave in waves) &#123;　　　　</div><div class="line">	  for(int i = 0; i &lt; wave.count; i++)&#123;</div><div class="line">		GameObject.Instantiate (wave.enemyPrefab, </div><div class="line">		startPos.position, Quaternion.identity);</div><div class="line">		countOfEnemyIsAlive++;</div><div class="line">			if(i != wave.count-1)</div><div class="line">				yield return new WaitForSeconds (wave.rate);</div><div class="line">	  &#125;</div><div class="line">	  while (countOfEnemyIsAlive &gt; 0) &#123;</div><div class="line">		yield return 0;</div><div class="line">	  &#125;</div><div class="line">	  yield return new WaitForSeconds (timeBetweenSpawn);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170906072822626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>敵の自動作成と移動を完了したんです。ソースコード：<br><a href="https://github.com/jlsgkid/TowerDefence" target="_blank" rel="external">https://github.com/jlsgkid/TowerDefence</a></p>
+<p>次はユニットの追加と攻撃です。2017.9.8に更新予定です。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/30/text/" itemprop="url">
-              
-                <span itemprop="name">Lee</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-30T21:11:16+09:00"
-              content="2016-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/unity/" rel="tag"># unity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/27/vracademy01/" rel="next" title="VRゼロから始める魔法世界の冒険">
+                <i class="fa fa-chevron-left"></i> VRゼロから始める魔法世界の冒険
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -480,6 +475,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -760,11 +759,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
