@@ -2,16 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.jlsgkid.com/2017/05/14/Daydream/</loc>
+    
+    <lastmod>2017-09-07T00:56:59.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/08/15/music/</loc>
+    
+    <lastmod>2017-09-07T00:55:58.265Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/12/23/CSDN-markdown/</loc>
+    
+    <lastmod>2017-09-07T00:55:37.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/04/01/April/</loc>
+    
+    <lastmod>2017-09-07T00:55:27.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.jlsgkid.com/2017/09/04/TDGame/</loc>
     
-    <lastmod>2017-09-06T04:22:59.953Z</lastmod>
+    <lastmod>2017-09-07T00:54:25.206Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.jlsgkid.com/2017/02/26/RunWithColor/</loc>
     
-    <lastmod>2017-09-06T04:20:09.032Z</lastmod>
+    <lastmod>2017-09-07T00:54:20.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/25/20170825_Vuforia/</loc>
+    
+    <lastmod>2017-09-07T00:54:13.518Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/26/ARKit_Drawing/</loc>
+    
+    <lastmod>2017-09-07T00:54:09.768Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/tags/index.html</loc>
+    
+    <lastmod>2017-09-07T00:53:56.988Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/27/vracademy01/</loc>
+    
+    <lastmod>2017-09-07T00:46:10.356Z</lastmod>
     
   </url>
   
@@ -23,58 +79,9 @@
   </url>
   
   <url>
-    <loc>http://www.jlsgkid.com/2017/08/27/vracademy01/</loc>
-    
-    <lastmod>2017-09-04T00:58:37.816Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2016/12/23/CSDN-markdown/</loc>
-    
-    <lastmod>2017-09-04T00:54:40.051Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2016/08/15/music/</loc>
-    
-    <lastmod>2017-09-04T00:53:56.344Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.jlsgkid.com/2016/03/25/hello-world/</loc>
     
     <lastmod>2017-09-04T00:53:16.819Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2016/04/01/April/</loc>
-    
-    <lastmod>2017-09-04T00:52:57.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2017/08/26/ARKit_Drawing/</loc>
-    
-    <lastmod>2017-08-30T05:04:34.072Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2017/05/14/Daydream/</loc>
-    
-    <lastmod>2017-08-28T07:01:16.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jlsgkid.com/2017/08/25/20170825_Vuforia/</loc>
-    
-    <lastmod>2017-08-25T07:25:42.853Z</lastmod>
     
   </url>
   
