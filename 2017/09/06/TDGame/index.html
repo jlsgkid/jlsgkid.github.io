@@ -102,7 +102,7 @@
 <meta name="keywords" content="unity3d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Making a game in 48 hours -03">
-<meta property="og:url" content="http://www.jlsgkid.com/2017/09/04/TDGame/index.html">
+<meta property="og:url" content="http://www.jlsgkid.com/2017/09/06/TDGame/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
 <meta property="og:description" content="今回タワー・ディフェンスゲームを作ってみます。迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。 防御ユニットの置き場はこういう感じです：">
 <meta property="og:locale" content="ja">
@@ -110,7 +110,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170906072525672?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170906072749726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170906072822626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-09-07T00:54:25.206Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20170908064946989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170908070444453?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170908071904560?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-08T00:48:03.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Making a game in 48 hours -03">
 <meta name="twitter:description" content="今回タワー・ディフェンスゲームを作ってみます。迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。 防御ユニットの置き場はこういう感じです：">
@@ -143,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/2017/09/04/TDGame/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2017/09/06/TDGame/"/>
 
 
 
@@ -272,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/04/TDGame/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/06/TDGame/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -301,8 +304,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-04T15:31:16+09:00">
-                2017-09-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-06T13:17:35+09:00">
+                2017-09-06
               </time>
             
 
@@ -341,7 +344,7 @@
 
           
           
-             <span id="/2017/09/04/TDGame/" class="leancloud_visitors" data-flag-title="Making a game in 48 hours -03">
+             <span id="/2017/09/06/TDGame/" class="leancloud_visitors" data-flag-title="Making a game in 48 hours -03">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -385,7 +388,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">EnemySpawner:</div><div class="line">IEnumerator SpawnEnemy()&#123;</div><div class="line">　　　//各Waveで設定される敵数によって敵を生成する。</div><div class="line">	foreach (Wave wave in waves) &#123;　　　　</div><div class="line">	  for(int i = 0; i &lt; wave.count; i++)&#123;</div><div class="line">		GameObject.Instantiate (wave.enemyPrefab, </div><div class="line">		startPos.position, Quaternion.identity);</div><div class="line">		countOfEnemyIsAlive++;</div><div class="line">			if(i != wave.count-1)</div><div class="line">				yield return new WaitForSeconds (wave.rate);</div><div class="line">	  &#125;</div><div class="line">	  while (countOfEnemyIsAlive &gt; 0) &#123;</div><div class="line">		yield return 0;</div><div class="line">	  &#125;</div><div class="line">	  yield return new WaitForSeconds (timeBetweenSpawn);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><img src="http://img.blog.csdn.net/20170906072822626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 <p>敵の自動作成と移動を完了したんです。ソースコード：<br><a href="https://github.com/jlsgkid/TowerDefence" target="_blank" rel="external">https://github.com/jlsgkid/TowerDefence</a></p>
-<p>次はユニットの追加と攻撃です。2017.9.8に更新予定です。</p>
+<hr>
+<p>2017.9.8更新：<br>ユニットのモデルを準備します。<br>３種類があります。LaserTurret、MissileTurretとStandardTurretです。ユニットはアップデートすることができます。見た目は以下のようになります。<br><img src="http://img.blog.csdn.net/20170908064946989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>じゃあ、UIから始めましょう。毎回、３種類のユニットを一つしか選択できないように設定するため、UI→Toggleを作成します。所持金を消費することで性能が上がったユニットにすることができるので、ユニットの値段も追加します。<br><img src="http://img.blog.csdn.net/20170908070444453?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>ユニットクラスを作ります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//アップデートする前のプレハブ</div><div class="line">public GameObject turretPrefab;</div><div class="line">//ユニットを設置する消費金</div><div class="line">public int cost = 0;</div><div class="line">//アップデートした後のプレハブ</div><div class="line">public GameObject turrentPrefabUpd;</div><div class="line">//アップデートする消費金</div><div class="line">public int updCost = 0;</div><div class="line">//ユニットのタイプ</div><div class="line">public TurretType type;</div></pre></td></tr></table></figure>
+<p>ユニットマネージャークラスを作ります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">if(Input.GetMouseButtonDown(0))&#123;</div><div class="line">　　//UIの場合、処理を飛ばす</div><div class="line">	if (EventSystem.current.IsPointerOverGameObject () == false) &#123;</div><div class="line">		// not on UI</div><div class="line">		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);</div><div class="line">		RaycastHit hit;</div><div class="line">		bool isCollided = Physics.Raycast(ray, out hit, 1000, LayerMask.GetMask(&quot;MapCube&quot;));</div><div class="line">		if(isCollided)&#123;</div><div class="line">			MapCube mapCube = hit.collider.GetComponent&lt;MapCube&gt; ();</div><div class="line">			if(mapCube.currentTurret == null)&#123;</div><div class="line">				//can build</div><div class="line">				if (money &gt; selectedTurret.cost) &#123;</div><div class="line">					ChangeMoney (-selectedTurret.cost);</div><div class="line">					mapCube.CreateTurret (selectedTurret.turretPrefab);</div><div class="line">				&#125; else &#123;</div><div class="line">					//赤くなる設定</div><div class="line">					moneyAnim.SetTrigger(&quot;flash&quot;);</div><div class="line">				&#125;</div><div class="line">			&#125;else&#123;</div><div class="line">				//turret update</div><div class="line">				//ユニットのアップアートは後で書く</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>実行してみます。右側のユニットを選択して白いマップキューブにクリックしたら、ユニットが作成されました。最初の所持金は５００にしましたが、足りないの場合ユニットの作成はできず、金額のテキストを赤くなるように設定しました。<br><img src="http://img.blog.csdn.net/20170908071904560?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>今回は以上です。次は敵を攻撃するスクリプトとアニメを更新する予定です。</p>
 
       
     </div>
