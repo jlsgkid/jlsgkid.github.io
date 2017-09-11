@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://www.jlsgkid.com/2016/02/15/music/</loc>
+    <lastmod>2017-09-11T07:18:16.043Z</lastmod>
+    <data>
+        <display>
+        <title>BGM</title>
+        <pubTime>2016-02-15T07:10:09.000Z</pubTime>
+        
+        <tag>anime</tag>
+         
+         
+           
+             
+              <breadCrumb title="anime" url="http://www.jlsgkid.com/categories/anime/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jlsgkid.com/2016/06/21/ToonShader/</loc>
+    <lastmod>2017-09-11T07:15:34.274Z</lastmod>
+    <data>
+        <display>
+        <title>Shaderでアニメ風表現を作る</title>
+        <pubTime>2016-06-21T12:31:16.000Z</pubTime>
+        
+        <tag>Shader</tag>
+         
+         
+           
+             
+              <breadCrumb title="Shader" url="http://www.jlsgkid.com/categories/Shader/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jlsgkid.com/2017/09/06/TDGame/</loc>
     <lastmod>2017-09-11T01:15:57.310Z</lastmod>
     <data>
@@ -37,26 +77,6 @@
            
              
               <breadCrumb title="VR" url="http://www.jlsgkid.com/categories/VR/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jlsgkid.com/2016/08/15/music/</loc>
-    <lastmod>2017-09-07T00:55:58.265Z</lastmod>
-    <data>
-        <display>
-        <title>BGM</title>
-        <pubTime>2016-08-15T07:10:09.000Z</pubTime>
-        
-        <tag>anime</tag>
-         
-         
-           
-             
-              <breadCrumb title="anime" url="http://www.jlsgkid.com/categories/anime/"/>
           
         </display>
     </data>
