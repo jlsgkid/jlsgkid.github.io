@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Shader," />
+  <meta name="keywords" content="unity3d," />
 
 
 
@@ -98,22 +98,23 @@
 
 
 
-<meta name="description" content="参考記事：http://nn-hokuson.hatenablog.com/entry/2016/11/14/203745「【Unityシェーダ入門】円やリングをかっこよく動かす方法」という記事の内容を勉強しながら以下のシェーダを作ってみました。 モデルを追加して、アニメーションも新規作りました。">
-<meta name="keywords" content="Shader">
+<meta name="description" content="今回ボードゲー - 五目並べ(禁手なし)を作ってみました。縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。 対戦モードが二つがあります。一人で対戦（AI）二人で対戦：黒（先手）白（後手）">
+<meta name="keywords" content="unity3d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shader入門01 - 円やリングを動かす方法">
-<meta property="og:url" content="http://www.jlsgkid.com/2016/12/03/Shader01/index.html">
+<meta property="og:title" content="Making a game in 48 hours -02">
+<meta property="og:url" content="http://www.jlsgkid.com/2017/04/22/FiveInARow/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
-<meta property="og:description" content="参考記事：http://nn-hokuson.hatenablog.com/entry/2016/11/14/203745「【Unityシェーダ入門】円やリングをかっこよく動かす方法」という記事の内容を勉強しながら以下のシェーダを作ってみました。 モデルを追加して、アニメーションも新規作りました。">
+<meta property="og:description" content="今回ボードゲー - 五目並べ(禁手なし)を作ってみました。縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。 対戦モードが二つがあります。一人で対戦（AI）二人で対戦：黒（先手）白（後手）">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="http://img.blog.csdn.net/20170914075148922?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170914080133528?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="https://github.com/jlsgkid/TowerDefence/blob/master/SFGM_Tower%20Df/s223.gif?raw=true">
-<meta property="og:updated_time" content="2017-09-14T09:33:27.443Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20170925072408911?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170925072255570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170924235018931?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170925071512450?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-25T01:10:27.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shader入門01 - 円やリングを動かす方法">
-<meta name="twitter:description" content="参考記事：http://nn-hokuson.hatenablog.com/entry/2016/11/14/203745「【Unityシェーダ入門】円やリングをかっこよく動かす方法」という記事の内容を勉強しながら以下のシェーダを作ってみました。 モデルを追加して、アニメーションも新規作りました。">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170914075148922?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="Making a game in 48 hours -02">
+<meta name="twitter:description" content="今回ボードゲー - 五目並べ(禁手なし)を作ってみました。縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。 対戦モードが二つがあります。一人で対戦（AI）二人で対戦：黒（先手）白（後手）">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170925072408911?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -142,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/2016/12/03/Shader01/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2017/04/22/FiveInARow/"/>
 
 
 
 
 
-  <title>Shader入門01 - 円やリングを動かす方法 | 仮想と拡張現実</title>
+  <title>Making a game in 48 hours -02 | 仮想と拡張現実</title>
   
 
 
@@ -271,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2016/12/03/Shader01/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/04/22/FiveInARow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -288,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Shader入門01 - 円やリングを動かす方法</h1>
+          <h1 class="post-title" itemprop="name headline">Making a game in 48 hours -02</h1>
         
 
         <div class="post-meta">
@@ -300,8 +301,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-03T17:38:16+09:00">
-                2016-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T13:31:26+09:00">
+                2017-04-22
               </time>
             
 
@@ -323,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Shader/" itemprop="url" rel="index">
-                    <span itemprop="name">Shader</span>
+                  <a href="/categories/unity3d/" itemprop="url" rel="index">
+                    <span itemprop="name">unity3d</span>
                   </a>
                 </span>
 
@@ -340,7 +341,7 @@
 
           
           
-             <span id="/2016/12/03/Shader01/" class="leancloud_visitors" data-flag-title="Shader入門01 - 円やリングを動かす方法">
+             <span id="/2017/04/22/FiveInARow/" class="leancloud_visitors" data-flag-title="Making a game in 48 hours -02">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -371,12 +372,23 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>参考記事：<a href="http://nn-hokuson.hatenablog.com/entry/2016/11/14/203745" target="_blank" rel="external">http://nn-hokuson.hatenablog.com/entry/2016/11/14/203745</a><br>「【Unityシェーダ入門】円やリングをかっこよく動かす方法」という記事の内容を勉強しながら以下のシェーダを作ってみました。</p>
-<p>モデルを追加して、アニメーションも新規作りました。<br><a id="more"></a><br><img src="http://img.blog.csdn.net/20170914075148922?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><img src="http://img.blog.csdn.net/20170914080133528?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>修正したシェーダは以下のとおりです。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">Shader &quot;Custom/Maho&quot; &#123;</div><div class="line">	Properties &#123;</div><div class="line">		_Color (&quot;Color&quot;, Color) = (1,1,1,1)</div><div class="line">		_MainTex (&quot;Albedo (RGB)&quot;, 2D) = &quot;white&quot; &#123;&#125;</div><div class="line">		_Glossiness (&quot;Smoothness&quot;, Range(0,1)) = 0.5</div><div class="line">		_Metallic (&quot;Metallic&quot;, Range(0,1)) = 0.0</div><div class="line">	&#125;</div><div class="line">	SubShader &#123;</div><div class="line">		Tags &#123; &quot;RenderType&quot;=&quot;Opaque&quot; &#125;</div><div class="line">		LOD 200</div><div class="line">		</div><div class="line">		CGPROGRAM</div><div class="line">		// Physically based Standard lighting model, and enable shadows on all light types</div><div class="line">		#pragma surface surf Standard Standard</div><div class="line"></div><div class="line">		// Use shader model 3.0 target, to get nicer looking lighting</div><div class="line">		#pragma target 3.0</div><div class="line"></div><div class="line">		sampler2D _MainTex;</div><div class="line"></div><div class="line">		struct Input &#123;</div><div class="line">			float2 uv_MainTex;</div><div class="line">			float3 worldPos;</div><div class="line">		&#125;;</div><div class="line"></div><div class="line">		half _Glossiness;</div><div class="line">		half _Metallic;</div><div class="line">		fixed4 _Color;</div><div class="line"></div><div class="line">		// Add instancing support for this shader. You need to check &apos;Enable Instancing&apos; on materials that use the shader.</div><div class="line">		//See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.</div><div class="line">		// #pragma instancing_options assumeuniformscaling</div><div class="line">		UNITY_INSTANCING_CBUFFER_START(Props)</div><div class="line">			// put more per-instance properties here</div><div class="line">		UNITY_INSTANCING_CBUFFER_END</div><div class="line"></div><div class="line">		void surf (Input IN, inout SurfaceOutputStandard o) &#123;</div><div class="line">			// Albedo comes from a texture tinted by color</div><div class="line">            //fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;</div><div class="line">			//o.Albedo = c.rgb;</div><div class="line">			//Metallic and smoothness come from slider variables</div><div class="line">			//o.Metallic = _Metallic;</div><div class="line">			//o.Smoothness = _Glossiness;</div><div class="line">			//o.Alpha = c.a;</div><div class="line">			//サーフェイスシェーダの入力としてワールド座標を受け取れる</div><div class="line">						float dist = distance(fixed3(0,0,0), IN.worldPos);</div><div class="line">			//float radius = 2;</div><div class="line">			//if(  radius &lt; dist &amp;&amp; dist &lt; radius + 0.2)&#123;</div><div class="line">			//o.Albedo = fixed4(110/255.0, 87/255.0, 139/255.0, 1);</div><div class="line">			//&#125; else &#123;</div><div class="line">			//o.Albedo = fixed4(1,1,1,1);</div><div class="line">			//&#125;</div><div class="line">			//float val = abs(sin(dist*5.0));</div><div class="line">			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;</div><div class="line">			float val = abs(sin(dist*4.0 + _Time * 100));</div><div class="line">			if( val &gt; 0.98 )&#123;</div><div class="line">				o.Albedo = fixed4(1, 1, 1, 1);</div><div class="line">			&#125; else &#123;</div><div class="line">				o.Albedo = c.rgb;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		ENDCG</div><div class="line">	&#125;</div><div class="line">	FallBack &quot;Diffuse&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>イメージは以下のとおりですね。</p>
-<p><img src="https://github.com/jlsgkid/TowerDefence/blob/master/SFGM_Tower%20Df/s223.gif?raw=true" alt=""></p>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>今回ボードゲー - 五目並べ(禁手なし)を作ってみました。<br>縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。</p>
+<p>対戦モードが二つがあります。<br>一人で対戦（AI）<br>二人で対戦：黒（先手）白（後手）</p>
+<p><img src="http://img.blog.csdn.net/20170925072408911?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br><a id="more"></a><br>碁盤（コライダー付け）は14＊14です。計算しやすいために、カメラを（7、7）の位置を移動して、碁盤も移動して左下点の座標は（0、0）にします。<br><img src="http://img.blog.csdn.net/20170925072255570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>プレイヤーのクラスを作成します。今回はイオ向けですのでInput.GetTouchでタッチしたピクセル座標を取得してCamera.ScreenPointToRayを使って、スクリーンの点を通してカメラからレイを通します。Physics.Raycastを使って、衝突した点の座標を取得する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Ray ray;</div><div class="line">#if UNITY_EDITOR</div><div class="line">ray = Camera.main.ScreenPointToRay (Input.mousePosition);</div><div class="line">#elif UNITY_IOS</div><div class="line">ray = Camera.main.ScreenPointToRay (Input.GetTouch (0).position);</div><div class="line">#endif</div><div class="line">if(Input.touchCount &gt; 0)&#123;</div><div class="line">	Vector2 fingerPos = Input.GetTouch (0).position;</div><div class="line">	bool isUI = IsPointerOverUIObject(fingerPos);</div><div class="line">	if(isUI == false)&#123;</div><div class="line">		RaycastHit hit;</div><div class="line">		Physics.Raycast (ray, out hit);</div><div class="line">		cb.Play (new int[]&#123;(int)(hit.point.x + 0.5f), (int)(hit.point.y + 0.5f)&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>次はAIの部分です。説明は難しいと思いますが、<br>碁盤の中での点を縦・横・斜めスキャンして、最優先位置を取るために、weights図を作成する。</p>
+<p><img src="http://img.blog.csdn.net/20170924235018931?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>weights図のテンプレート文字列を作成します。<br>縦・横・斜めの一行でもし隣のコマが自分と同じ色の場合テンプレート文字列プラス”＊”、隣にはコマがない場合プラス”_”、自分と違う色の場合ブレークします。最後、作成する文字列をKeyとしてweights図リストで検索して、対応する値が存在する場合、取得して返します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">int CheckOneLine(int[] pos, int[] offset, int chess)&#123;</div><div class="line">		string temp = &quot;&quot;;</div><div class="line">		//int score = 0;</div><div class="line">		for(int x= pos[0] + offset[0], y= pos[1] + offset[1]; </div><div class="line">			x &lt; 15 &amp;&amp; x &gt;= 0 &amp;&amp; y &lt; 15 &amp;&amp; y &gt;= 0; x+= offset[0], y+= offset[1] )&#123;</div><div class="line">			if (cb.grid [x, y] == (int)chess) &#123;</div><div class="line">				//gou zao</div><div class="line">				temp = temp + &quot;*&quot;;</div><div class="line"></div><div class="line">			&#125; else if (cb.grid [x, y] == 0) &#123;</div><div class="line">				temp = temp + &quot;_&quot;;</div><div class="line">				break;</div><div class="line">			&#125; else &#123;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		for(int x= pos[0] - offset[0], y= pos[1] - offset[1]; </div><div class="line">			x &lt; 15 &amp;&amp; x &gt;= 0 &amp;&amp; y &lt; 15 &amp;&amp; y &gt;= 0; x-= offset[0], y-= offset[1] )&#123;</div><div class="line"></div><div class="line">			if(cb.grid[x,y] == (int)chess)&#123;</div><div class="line">				//棋子的颜色判断</div><div class="line">				temp = &quot;*&quot; +  temp ;</div><div class="line"></div><div class="line">			&#125;else if (cb.grid [x, y] == 0) &#123;</div><div class="line">				temp = &quot;_&quot; +  temp ;</div><div class="line">				break;</div><div class="line">			&#125; else &#123;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		int maxScore = 0;</div><div class="line">		foreach( var item in toScore)&#123;</div><div class="line">			if(temp.Contains(item.Key) &amp;&amp; toScore[item.Key] &gt; maxScore)&#123;</div><div class="line">				maxScore = toScore [item.Key];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return maxScore;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>各パスで値が大きいの方は優先度が高いです。<br>優先度が一番高いの位置にコマ（白）を置かせますね。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">int SetScore(int[] pos)&#123;</div><div class="line">int score = 0;</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, 0&#125;, 1) + 1;</div><div class="line">score += CheckOneLine(pos, new int[]&#123;0, 1&#125;, 1) + 1;</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, 1&#125;, 1) + 1;</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, -1&#125;,1) + 1;</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, 0&#125;, 2);</div><div class="line">score += CheckOneLine(pos, new int[]&#123;0, 1&#125;, 2);</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, 1&#125;, 2);</div><div class="line">score += CheckOneLine(pos, new int[]&#123;1, -1&#125;,2);</div><div class="line">return score;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>weights図は何かというと、想定できる文字列をテンプレートとして値を設定します。値が高いの方が優先度が高いです。<br>以下の例をご覧ください：</p>
+<p><img src="http://img.blog.csdn.net/20170925071512450?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>斜めの方向での文字列の対応する値が一番大きいですね。<br>つまり、赤い輪のところにweights値が一番大きいですから、ここにコマを置きましょう。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">SortedList&lt;string, int&gt; weightsOfPathList;</div><div class="line">		weightsOfPathList.Add (&quot;_*_&quot;, 10);</div><div class="line">		weightsOfPathList.Add (&quot;_**_&quot;, 100);</div><div class="line">		weightsOfPathListAdd (&quot;***_&quot;, 500);</div><div class="line">		weightsOfPathList.Add (&quot;_***&quot;, 500);</div><div class="line">		weightsOfPathList.Add (&quot;_***_&quot;, 1000);</div><div class="line">		weightsOfPathList.Add (&quot;****_&quot;, 5000);</div><div class="line">		tweightsOfPathList.Add (&quot;_****&quot;, 5000);</div><div class="line">		weightsOfPathList.Add (&quot;_****_&quot;, 5000);</div><div class="line">		weightsOfPathList.Add (&quot;****&quot;, 5000);</div><div class="line">		weightsOfPathList.Add (&quot;*****&quot;, 100000);</div></pre></td></tr></table></figure>
+<p>着手した手を直す機能も追加しました。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public void ReSetChess()&#123;</div><div class="line">	if(chessPath.Count &lt;= 0)&#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	GameObject temp = chessPath.Pop ();</div><div class="line">	grid [(int)(temp.transform.position.x), (int)(temp.transform.position.y)] = 0;</div><div class="line">	Destroy (temp);</div><div class="line">	if(chessPath.Count &lt;= 0)&#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	temp = chessPath.Pop ();</div><div class="line">	grid [(int)(temp.transform.position.x), (int)(temp.transform.position.y)] = 0;</div><div class="line">	Destroy (temp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ここまでご覧いただき、ありがとうございます。<br>日本語が下手ですから、説明がなかなか難しいです。<br>すみません、今回は以上ですね。引き続き頑張ります！</p>
 
       
     </div>
@@ -394,7 +406,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Shader/" rel="tag"># Shader</a>
+            <a href="/tags/unity3d/" rel="tag"># unity3d</a>
           
         </div>
       
@@ -407,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/21/ToonShader/" rel="next" title="Shaderでアニメ風表現を作る">
-                <i class="fa fa-chevron-left"></i> Shaderでアニメ風表現を作る
+              <a href="/2017/02/26/RunWithColor/" rel="next" title="Making a game in 48 hours -01">
+                <i class="fa fa-chevron-left"></i> Making a game in 48 hours -01
               </a>
             
           </div>
@@ -417,8 +429,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/26/RunWithColor/" rel="prev" title="Making a game in 48 hours -01">
-                Making a game in 48 hours -01 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/14/Daydream/" rel="prev" title="DaydreamViewでVRアプリ開発環境">
+                DaydreamViewでVRアプリ開発環境 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
