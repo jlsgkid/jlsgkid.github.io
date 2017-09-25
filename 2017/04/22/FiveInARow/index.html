@@ -110,7 +110,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170925072255570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170924235018931?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170925071512450?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-09-25T01:10:27.320Z">
+<meta property="og:updated_time" content="2017-09-25T04:31:19.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Making a game in 48 hours -02">
 <meta name="twitter:description" content="今回ボードゲー - 五目並べ(禁手なし)を作ってみました。縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。 対戦モードが二つがあります。一人で対戦（AI）二人で対戦：黒（先手）白（後手）">
@@ -389,6 +389,7 @@
 <p>着手した手を直す機能も追加しました。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public void ReSetChess()&#123;</div><div class="line">	if(chessPath.Count &lt;= 0)&#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	GameObject temp = chessPath.Pop ();</div><div class="line">	grid [(int)(temp.transform.position.x), (int)(temp.transform.position.y)] = 0;</div><div class="line">	Destroy (temp);</div><div class="line">	if(chessPath.Count &lt;= 0)&#123;</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	temp = chessPath.Pop ();</div><div class="line">	grid [(int)(temp.transform.position.x), (int)(temp.transform.position.y)] = 0;</div><div class="line">	Destroy (temp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>ここまでご覧いただき、ありがとうございます。<br>日本語が下手ですから、説明がなかなか難しいです。<br>すみません、今回は以上ですね。引き続き頑張ります！</p>
+<p>全体的には以下のようになりました。<br><div class="video-container"><iframe src="//www.youtube.com/embed/RR8vK2aHrSA" frameborder="0" allowfullscreen></iframe></div></p>
 
       
     </div>
