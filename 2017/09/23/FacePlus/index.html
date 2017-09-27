@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VR, AR, unity, unity3d" />
+  <meta name="keywords" content="unity3d," />
 
 
 
@@ -98,13 +98,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="仮想と拡張現実">
-<meta property="og:url" content="http://www.jlsgkid.com/archives/2016/05/index.html">
+<meta name="description" content="こんにちは、今回中国の旷视というメーカーから提供しているFace++というサービスを利用して写真中での「簡体字」を認識するアプリを作ってみました！https://www.faceplusplus.com.cn 機能としては、先ず簡体字がある写真を撮るかスマホのアルバムから取ってFace++のサーバーにアップロードして「テキスト認識」というサービスを使って認識される文字列がjsonで返されてクライア">
+<meta name="keywords" content="unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Face++を利用して簡体字認識アプリの開発">
+<meta property="og:url" content="http://www.jlsgkid.com/2017/09/23/FacePlus/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
+<meta property="og:description" content="こんにちは、今回中国の旷视というメーカーから提供しているFace++というサービスを利用して写真中での「簡体字」を認識するアプリを作ってみました！https://www.faceplusplus.com.cn 機能としては、先ず簡体字がある写真を撮るかスマホのアルバムから取ってFace++のサーバーにアップロードして「テキスト認識」というサービスを使って認識される文字列がjsonで返されてクライア">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="http://img.blog.csdn.net/20170927071845108?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170927073044117?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-27T01:37:46.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仮想と拡張現実">
+<meta name="twitter:title" content="Face++を利用して簡体字認識アプリの開発">
+<meta name="twitter:description" content="こんにちは、今回中国の旷视というメーカーから提供しているFace++というサービスを利用して写真中での「簡体字」を認識するアプリを作ってみました！https://www.faceplusplus.com.cn 機能としては、先ず簡体字がある写真を撮るかスマホのアルバムから取ってFace++のサーバーにアップロードして「テキスト認識」というサービスを使って認識される文字列がjsonで返されてクライア">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170927071845108?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -133,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/archives/2016/05/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2017/09/23/FacePlus/"/>
 
 
 
 
 
-  <title>アーカイブ | 仮想と拡張現実</title>
+  <title>Face++を利用して簡体字認識アプリの開発 | 仮想と拡張現実</title>
   
 
 
@@ -164,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,74 +256,207 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        うーん! 全 15 ポスト もっと書こう！
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/23/FacePlus/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/05/14/CSDN-markdown/" itemprop="url">
-              
-                <span itemprop="name">「Unity」視錐台についての勉強</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Face++を利用して簡体字認識アプリの開発</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-14T22:36:16+09:00"
-              content="2016-05-14" >
-          05-14
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-23T21:50:23+09:00">
+                2017-09-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unity3d/" itemprop="url" rel="index">
+                    <span itemprop="name">unity3d</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/23/FacePlus/" class="leancloud_visitors" data-flag-title="Face++を利用して簡体字認識アプリの開発">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>こんにちは、今回中国の旷视というメーカーから提供しているFace++というサービスを利用して写真中での「簡体字」を認識するアプリを作ってみました！<br><a href="https://www.faceplusplus.com.cn" target="_blank" rel="external">https://www.faceplusplus.com.cn</a></p>
+<p>機能としては、先ず簡体字がある写真を撮るかスマホの<br>アルバムから取ってFace++のサーバーにアップロードして「テキスト認識」というサービスを使って認識される文字列がjsonで返されてクライアントで解析します。<br><img src="http://img.blog.csdn.net/20170927071845108?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br><a id="more"></a><br>Face++のインタフェースを呼び出すところ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">	public void TestHttpSend(string path)</div><div class="line">	&#123;</div><div class="line">		WWWForm form = new WWWForm();</div><div class="line">		form.AddField(&quot;api_key&quot;, &quot;4ve3GloQbtbArqjKacQsIEoqlcVoT2Od&quot;);</div><div class="line">		form.AddField(&quot;api_secret&quot;, &quot;Aiwt7vPwoBvyZfcoY3jt6A_LXEGgSRni&quot;);</div><div class="line">		//form.AddField(&quot;image_url&quot;, path);</div><div class="line">		form.AddField(&quot;image_base64&quot;, path);</div><div class="line">		StartCoroutine(SendPost(&quot;https://api-cn.faceplusplus.com/imagepp/v1/recognizetext&quot;, form));</div><div class="line">		</div><div class="line">IEnumerator SendPost(string _url, WWWForm _wForm)</div><div class="line">	&#123;</div><div class="line">		WWW postData = new WWW(_url, _wForm);</div><div class="line">		yield return postData;</div><div class="line">		if (postData.error != null)</div><div class="line">		&#123;</div><div class="line">			Debug.Log(postData.error);</div><div class="line">			//ShowResult.SetActive(true);</div><div class="line">			//Btn_ShibieText.text = &quot;認識&quot;;</div><div class="line">			//ShowResult.transform.Find(&quot;Text&quot;).GetComponent&lt;Text&gt;().text = &quot;認識失敗！&quot;;</div><div class="line">			GameObject.Find(&quot;DebugText&quot;).GetComponent&lt;Text&gt;().text = postData.error;</div><div class="line">			//myTimer = 2.0f;</div><div class="line">		&#125;</div><div class="line">		else</div><div class="line">		&#123;</div><div class="line">			//Btn_ShibieText.text = &quot;認識&quot;;</div><div class="line">			Debug.Log(postData.text);</div><div class="line">			//GameObject.Find(&quot;DebugText&quot;).GetComponent&lt;Text&gt;().text = postData.text;</div><div class="line">			JsonJieXi(postData.text);</div><div class="line">			//show.text = postData.text.ToString ();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">//Jsonの解析</div><div class="line">	void JsonJieXi(string str)</div><div class="line">	&#123;	</div><div class="line">		show.text = &quot;&quot;;</div><div class="line">		JsonData jd = JsonMapper.ToObject(str);</div><div class="line">		Debug.Log(jd[&quot;result&quot;].Count);</div><div class="line">		for (int i = 0; i &lt; jd[&quot;result&quot;].Count; i++)</div><div class="line">		&#123;</div><div class="line">[&quot;child-objects&quot;].Count; j++)</div><div class="line">				Debug.Log(jd[&quot;result&quot;][i][&quot;type&quot;].ToString());</div><div class="line">				Debug.Log(jd[&quot;result&quot;][i][&quot;value&quot;].ToString());</div><div class="line">			show.text = show.text + jd [&quot;result&quot;] [i] [&quot;value&quot;].ToString ();</div><div class="line">		&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>//iosカメラのバイナリデータを取得してTestHttpSend関数に渡しますね。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">void callback_PickImage_With_Base64(string base64)</div><div class="line">&#123;	</div><div class="line">	Texture2D tex = IOSAlbumCamera.Base64StringToTexture2D (base64);</div><div class="line">	rawImage.texture = tex;</div><div class="line">	ri.TestHttpSend (base64);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170927073044117?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/unity3d/" rel="tag"># unity3d</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/04/TDGame/" rel="next" title="Making a game in 48 hours -03">
+                <i class="fa fa-chevron-left"></i> Making a game in 48 hours -03
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -323,6 +464,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -603,11 +748,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
