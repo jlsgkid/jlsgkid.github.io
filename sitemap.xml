@@ -1,199 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://www.jlsgkid.com/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/archives/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/11/20/U01/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/unity3d/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/09/23/FacePlus/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/09/04/TDGame/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/08/27/vracademy01/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/VR/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/08/26/ARKit_Drawing/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/AR/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/page/2/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/page/4/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/index.html</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/archives/page/2/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/archives/page/4/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/AR/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/Shader/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/VR/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/anime/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/unity3d/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/04/22/FiveInARow/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/02/26/RunWithColor/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/unity3d/page/2/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/05/14/Daydream/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2017/08/25/20170825_Vuforia/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/12/03/Shader01/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/Shader/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/page/3/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/02/15/music/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/categories/anime/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/archives/page/3/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/06/21/ToonShader/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/04/01/April/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/tags/unity3d/page/2/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/05/14/CSDN-markdown/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/03/30/text/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://www.jlsgkid.com/2016/03/25/hello-world/</loc>
-  <lastmod>2017-11-21T07:00:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/11/20/U01/</loc>
+    
+    <lastmod>2017-11-21T06:58:39.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/09/23/FacePlus/</loc>
+    
+    <lastmod>2017-09-27T05:42:01.421Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/04/22/FiveInARow/</loc>
+    
+    <lastmod>2017-09-25T04:31:19.637Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/09/04/TDGame/</loc>
+    
+    <lastmod>2017-09-25T01:08:17.255Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/12/03/Shader01/</loc>
+    
+    <lastmod>2017-09-14T09:33:27.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/05/14/CSDN-markdown/</loc>
+    
+    <lastmod>2017-09-12T00:40:33.954Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/06/21/ToonShader/</loc>
+    
+    <lastmod>2017-09-12T00:39:57.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/02/15/music/</loc>
+    
+    <lastmod>2017-09-11T07:18:16.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/05/14/Daydream/</loc>
+    
+    <lastmod>2017-09-07T00:56:59.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/04/01/April/</loc>
+    
+    <lastmod>2017-09-07T00:55:27.585Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/02/26/RunWithColor/</loc>
+    
+    <lastmod>2017-09-07T00:54:20.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/25/20170825_Vuforia/</loc>
+    
+    <lastmod>2017-09-07T00:54:13.518Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/26/ARKit_Drawing/</loc>
+    
+    <lastmod>2017-09-07T00:54:09.768Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/tags/index.html</loc>
+    
+    <lastmod>2017-09-07T00:53:56.988Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2017/08/27/vracademy01/</loc>
+    
+    <lastmod>2017-09-07T00:46:10.356Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/03/30/text/</loc>
+    
+    <lastmod>2017-09-04T01:01:04.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jlsgkid.com/2016/03/25/hello-world/</loc>
+    
+    <lastmod>2017-09-04T00:53:16.819Z</lastmod>
+    
+  </url>
+  
 </urlset>
