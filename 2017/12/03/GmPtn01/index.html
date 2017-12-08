@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VR, AR, unity, unity3d" />
+  <meta name="keywords" content="unity3d," />
 
 
 
@@ -98,17 +98,18 @@
 
 
 
-<meta name="description" content="Hello WorldsWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on G">
+<meta name="description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
+<meta name="keywords" content="unity3d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://www.jlsgkid.com/2016/03/25/hello-world/index.html">
+<meta property="og:title" content="デザインパターン01一Singleton × C#のジェネリック">
+<meta property="og:url" content="http://www.jlsgkid.com/2017/12/03/GmPtn01/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
-<meta property="og:description" content="Hello WorldsWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on G">
+<meta property="og:description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-04T00:53:16.819Z">
+<meta property="og:updated_time" content="2017-12-08T08:02:24.871Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hello WorldsWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on G">
+<meta name="twitter:title" content="デザインパターン01一Singleton × C#のジェネリック">
+<meta name="twitter:description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
 
 
 
@@ -137,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/2016/03/25/hello-world/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2017/12/03/GmPtn01/"/>
 
 
 
 
 
-  <title>Hexo | 仮想と拡張現実</title>
+  <title>デザインパターン01一Singleton × C#のジェネリック | 仮想と拡張現実</title>
   
 
 
@@ -266,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2016/03/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/12/03/GmPtn01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -283,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo</h1>
+          <h1 class="post-title" itemprop="name headline">デザインパターン01一Singleton × C#のジェネリック</h1>
         
 
         <div class="post-meta">
@@ -295,8 +296,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-25T23:31:16+09:00">
-                2016-03-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-03T22:30:43+09:00">
+                2017-12-03
               </time>
             
 
@@ -306,6 +307,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unity3d/" itemprop="url" rel="index">
+                    <span itemprop="name">unity3d</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -313,7 +336,7 @@
 
           
           
-             <span id="/2016/03/25/hello-world/" class="leancloud_visitors" data-flag-title="Hexo">
+             <span id="/2017/12/03/GmPtn01/" class="leancloud_visitors" data-flag-title="デザインパターン01一Singleton × C#のジェネリック">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -344,15 +367,19 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h2 id="Hello-Worlds"><a href="#Hello-Worlds" class="headerlink" title="Hello Worlds"></a>Hello Worlds</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。<br>つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペでめんどくさくなったんですね。<br>C#にはジェネリック(generics)という便利な機能があります。今回勉強のために、簡単でまとめてみます。<br>サンプル①　オーバーロードを使う時：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">void Save(string key, int value)&#123;&#125;</div><div class="line">void Save(string key, float value)&#123;&#125;</div><div class="line">void Save(string key, string value)&#123;&#125;</div><div class="line">	　　　　　　　↓</div><div class="line">void Save&lt;T&gt;(string key , T value)  where T : Object</div><div class="line">&#123;</div><div class="line">	/*保存処理*/</div><div class="line">&#125;</div><div class="line">//使用例 </div><div class="line">Save&lt;int&gt;(key, &quot;value1&quot;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Tに任意の型を指定する事で、複数の型に対応できるメソッドとなります。<br>もし特殊のタイプだけ対応する時：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">void  Save&lt;T&gt;(string key , T value)  where T : Object</div><div class="line">&#123;</div><div class="line">    if(typeof(T) == typeof(string))&#123;</div><div class="line">     　/*保存処理*/</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ジェネリックの定義</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class クラス名&lt;型引数&gt;</div><div class="line">  where 型引数中の型が満たすべき条件</div><div class="line">&#123;</div><div class="line">  クラス定義</div><div class="line">&#125;</div><div class="line">アクセスレベル 戻り値の型 メソッド名&lt;型引数&gt;(引数リスト)</div><div class="line"> where 型引数中の型が満たすべき条件</div><div class="line">&#123;</div><div class="line">  メソッド定義</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>whereの後には制約条件がある場合、型引数で与えた型に対するメソッド呼び出しなどは出来なくなります。    </p>
+<p>where T : 　struct    型Tは「値型」である<br>where T :　 class    型Tは「参照型」である<br>where T : 　new()    引数なしのコンストラクタを持つ。他の制約条件と同時に課す場合には、一番最後に指定する必要がある。<br>where T : 　[base class]    型Tは[base class]で指定された型を継承する。<br>where T : 　[interface]    型Tは[interface]で指定されたインターフェースを実装する。</p>
+<p>Unityではどうやって使いますか？以下はサンプルコードです。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">public class SingletonMgr&lt;T&gt; : MonoBehaviour where T : MonoBehaviour&#123;</div><div class="line">	private static T _instance;</div><div class="line">	private static bool isAppHasQuit = false;</div><div class="line">	public static T Instance&#123;</div><div class="line">	get &#123;</div><div class="line">		if (isAppHasQuit) &#123;</div><div class="line">			Debug.LogError(&quot;This application has quit!&quot;);</div><div class="line">			return null;</div><div class="line">		&#125;</div><div class="line">		if (_instance == null)&#123;</div><div class="line">			_instance = (T) FindObjectOfType(typeof(T));</div><div class="line">			if ( FindObjectsOfType(typeof(T)).Length &gt; 1 )</div><div class="line">			&#123;</div><div class="line">				Debug.LogError(&quot;More than one instance!&quot;);</div><div class="line">				return _instance;</div><div class="line">			&#125;</div><div class="line">			if(_instance  == null)&#123;</div><div class="line">				//初期化</div><div class="line">				GameObject singleton = new GameObject();</div><div class="line">				_instance = singleton.AddComponent&lt;T&gt;();</div><div class="line">				DontDestroyOnLoad(singleton);</div><div class="line">				Debug.Log(&quot;An instance of &quot; + typeof(T) + </div><div class="line">				&quot;is created in the scene&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return _instance;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//オブジェクトは削除される時の処理</div><div class="line">	public void OnDestroy () &#123;</div><div class="line">		applicationIsQuitting = true;</div><div class="line">	&#125;</div><div class="line">	protected void Awake()&#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//使い方:</div><div class="line">public class AudioManager : SingletonMgr&lt;AudioManager&gt; &#123;</div><div class="line">	public void Awake()</div><div class="line">    &#123;</div><div class="line">        if(this!= Instance)</div><div class="line">        &#123;</div><div class="line">            Destroy(this);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考：<br><a href="https://www.reddit.com/r/Unity3D/comments/1nb06h/unity_design_patterns_and_concepts_looking_for/" target="_blank" rel="external">Unity design patterns and concepts, looking for good sources</a><br><a href="http://ufcpp.net/study/csharp/oo_reference.html?key=valtype#valtype" target="_blank" rel="external">C#値型と参照型</a><br><a href="http://kan-kikuchi.hatenablog.com/entry/ManagerSceneAutoLoader" target="_blank" rel="external">http://kan-kikuchi.hatenablog.com/entry/ManagerSceneAutoLoader</a><br><a href="http://liangxiegame.com/post/2/" target="_blank" rel="external">单例的模板</a></p>
+<p>だいたいこんな感じですね。<br>次回はFSMにつてちょっと勉強しようと思います。<br><a href="http://blog.csdn.net/jwxkk/article/details/52054625" target="_blank" rel="external">unity3d中使用状态机</a></p>
 
       
     </div>
@@ -368,6 +395,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/unity3d/" rel="tag"># unity3d</a>
+          
+        </div>
+      
 
       
       
@@ -377,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/15/music/" rel="next" title="BGM">
-                <i class="fa fa-chevron-left"></i> BGM
+              <a href="/2017/11/20/U01/" rel="next" title="オブジェクト移動と回転方法のまとめ">
+                <i class="fa fa-chevron-left"></i> オブジェクト移動と回転方法のまとめ
               </a>
             
           </div>
@@ -386,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/30/text/" rel="prev" title="Lee">
-                Lee <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -464,17 +493,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            見出し
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            概要
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/timg.jpg"
@@ -596,22 +616,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-Worlds"><span class="nav-number">1.</span> <span class="nav-text">Hello Worlds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">2.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">2.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">2.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">2.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">2.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
