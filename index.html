@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/16/ml01_20200413/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/16/ml01_20200416/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -283,7 +283,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/16/ml01_20200413/" itemprop="url">無題</a></h1>
+                <a class="post-title-link" href="/2020/04/16/ml01_20200416/" itemprop="url">機械学習01_タイタニック号の予測</a></h1>
         
 
         <div class="post-meta">
@@ -295,7 +295,7 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T15:28:57+09:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T10:24:33+09:00">
                 2020-04-16
               </time>
             
@@ -306,6 +306,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -313,7 +335,7 @@
 
           
           
-             <span id="/2020/04/16/ml01_20200413/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2020/04/16/ml01_20200416/" class="leancloud_visitors" data-flag-title="機械学習01_タイタニック号の予測">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -345,30 +367,24 @@
 
       
         
-          
-            <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><hr>
-<p>title: 機械学習01_決定木の回帰木<br>date: 2020-04-14 13:51:03<br>tags: AI<br>categories: AI</p>
-<blockquote>
-<p>　今回は回帰木を実装しようと思います。</p>
+          <blockquote>
+<p>　今回は決定木でタイタニック号で生き残るのは誰という予測です。</p>
 </blockquote>
-<p><strong>DecisionTreeRegressor</strong> </p>
+<p><strong>タイタニック号からの機械学習</strong> </p>
+<p><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">タイタニック号：災害からの機械学習</a></p>
+<p>１、まずはデータセットを導入して、データを見てみましょう</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data = pd.read_csv(<span class="string">"../ディレクトリを指定/train.csv"</span>)</div><div class="line">data.head()</div><div class="line">data.info()</div></pre></td></tr></table></figure>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cuY29kZXhhLm5ldC93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8xMS9vdXRwdXRfMS5wbmc?x-oss-process=image/format,png" alt=""></p>
 <blockquote>
-<p>class sklearn.tree.DecisionTreeRegressor (criterion=’mse’, splitter=’best’, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, presort=False)</p>
+<p>Data columns (total 11 columns):<br> 0   Survived  891 non-null    int64   生存フラグ（0=死亡、1=生存）<br> 1   Pclass    891 non-null    int64   チケットクラス<br> 2   Name      891 non-null    object      乗客の名前<br> 3   Sex       891 non-null    object    （male=男性、female＝女性）<br> 4   Age       714 non-null    float64   年齢<br> 5   SibSp     891 non-null    int64    タイタニックに同乗している兄弟/配偶者の数<br> 6   Parch     891 non-null    int64    タイタニックに同乗している親/子供の数<br> 7   Ticket    891 non-null    object   チケット番号<br> 8   Fare      891 non-null    float64  料金<br> 9   Cabin     204 non-null    object   客室番号<br> 10  Embarked  889 non-null    object    出港地（タイタニックへ乗った港）<br>dtypes: float64(2), int64(4), object(5)</p>
 </blockquote>
-<p>criterion<br>    mse:使用均方误差mean squared error(MSE)，父节点和叶子节点之间的均方误差的差额将被用来作为 特征选择的标准<br>    回归树的接口score返回的是R平方，并不是MSE</p>
-<p><strong>交差検証（Cross-validation）</strong><br>　汎化精度を高めることが目的。交差検証では，データセットを kk 個に分割し，モデルの訓練と評価を kk 回行います。<br>得られた kk 個の評価値の平均をとった値を最終的なモデルのスコアとして扱います。</p>
-<blockquote>
-<p>1.データを kk 個のブロックに分ける．これを分割（fold）という．<br>2.最初の分割1 を test set，残りの分割2~5 を training set とし，モデルの学習と評価を行う．<br>3.分割2 を test set，残りの分割1, 3~5 を training set として，モデルの学習と評価を行う．<br>4.この過程を，分割3, 4, 5 を test set として繰り返す．<br>5.得られた kk 個の精度の平均値をモデルの評価値とする．</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston </div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score </div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</div><div class="line"> </div><div class="line">boston = load_boston() </div><div class="line">regressor = DecisionTreeRegressor(random_state=<span class="number">0</span>) </div><div class="line"></div><div class="line">cross_val_score(regressor, boston.data, </div><div class="line">boston.target, cv=<span class="number">10</span>,                 </div><div class="line">scoring = <span class="string">"neg_mean_squared_error"</span>)</div></pre></td></tr></table></figure>
-<p><strong>例：一次元回帰図面の作成</strong></p>
-<blockquote>
-<p>回帰木でSIN図面を作成、過学習を検証する。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line">rng = np.random.RandomState(<span class="number">1</span>)</div><div class="line"><span class="number">5</span>*rng.rand(<span class="number">100</span>,<span class="number">1</span>)</div><div class="line"></div><div class="line">#data is two layer</div><div class="line">x = np.sort(<span class="number">10</span>*rng.rand(<span class="number">100</span>,<span class="number">1</span>), axis=<span class="number">0</span>)</div><div class="line"></div><div class="line">#label is one layer</div><div class="line">y = np.sin(x)</div><div class="line">y = y.ravel()</div><div class="line">y.shape #(100,)</div><div class="line"></div><div class="line">y[::<span class="number">5</span>] += <span class="number">3</span> * (<span class="number">0.5</span> - rng.rand(<span class="number">20</span>))</div><div class="line"></div><div class="line">reg1 = tree.DecisionTreeRegressor(max_depth=<span class="number">3</span>)</div><div class="line">reg2 = tree.DecisionTreeRegressor(max_depth=<span class="number">5</span>) </div><div class="line">reg1.fit(x,y)</div><div class="line">reg2.fit(x,y)</div><div class="line"></div><div class="line">np.arange(<span class="number">0.0</span>, <span class="number">10.0</span>, <span class="number">0.01</span>)</div><div class="line">#add layer to two</div><div class="line">x_test = np.arange(<span class="number">0.0</span>, <span class="number">10.0</span>, <span class="number">0.01</span>)[:,np.newaxis]</div><div class="line"></div><div class="line">y1 = reg1.predict(x_test) </div><div class="line">y2 = reg2.predict(x_test)</div><div class="line"></div><div class="line">#draw the regressor</div><div class="line">plt.figure()</div><div class="line">#plt.scatter(x,y,s=50,edgecolors="black", c="dk", label = "data")</div><div class="line">plt.scatter(x, y, s=<span class="number">50</span>, edgecolor=<span class="string">"black"</span>,c=<span class="string">"yellow"</span>, label=<span class="string">"data"</span>) </div><div class="line">plt.plot(x_test, y1, color=<span class="string">"red"</span>,label=<span class="string">"max_depth=3"</span>, linewidth=<span class="number">2</span>) </div><div class="line">plt.plot(x_test, y2, color=<span class="string">"blue"</span>, label=<span class="string">"max_depth=5"</span>, linewidth=<span class="number">1</span>) </div><div class="line">plt.xlabel(<span class="string">"data"</span>) </div><div class="line">plt.ylabel(<span class="string">"target"</span>) </div><div class="line">plt.title(<span class="string">"Decision Tree Regression"</span>) </div><div class="line">plt.legend() </div><div class="line">plt.show()</div></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200416113116757.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70 =450x320" alt="ct3"><br>作成した図面から見ると、max_depth=5のモデルは過学習でしたね。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/16/ml01_20200416/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -415,7 +431,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/16/ml01_20200416/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/14/ml01_20200413/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -434,7 +450,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/16/ml01_20200416/" itemprop="url">無題</a></h1>
+                <a class="post-title-link" href="/2020/04/14/ml01_20200413/" itemprop="url">機械学習01_決定木の回帰木</a></h1>
         
 
         <div class="post-meta">
@@ -446,8 +462,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T15:28:57+09:00">
-                2020-04-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-14T13:51:03+09:00">
+                2020-04-14
               </time>
             
 
@@ -457,6 +473,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -464,7 +502,7 @@
 
           
           
-             <span id="/2020/04/16/ml01_20200416/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2020/04/14/ml01_20200413/" class="leancloud_visitors" data-flag-title="機械学習01_決定木の回帰木">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -496,22 +534,20 @@
 
       
         
-          <hr>
-<p>title: 機械学習01_タイタニック号の予測<br>date: 2020-04-16 10:24:33<br>tags: AI<br>categories: AI</p>
-<blockquote>
-<p>　今回は決定木でタイタニック号で生き残るのは誰という予測です。</p>
+          <blockquote>
+<p>　今回は回帰木を実装しようと思います。</p>
 </blockquote>
-<p><strong>タイタニック号からの機械学習</strong> </p>
-<p><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">タイタニック号：災害からの機械学習</a></p>
-<p>１、まずはデータセットを導入して、データを見てみましょう</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data = pd.read_csv(<span class="string">"../ディレクトリを指定/train.csv"</span>)</div><div class="line">data.head()</div><div class="line">data.info()</div></pre></td></tr></table></figure>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cuY29kZXhhLm5ldC93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8xMS9vdXRwdXRfMS5wbmc?x-oss-process=image/format,png" alt=""></p>
+<p><strong>DecisionTreeRegressor</strong> </p>
 <blockquote>
-<p>Data columns (total 11 columns):<br> 0   Survived  891 non-null    int64   生存フラグ（0=死亡、1=生存）<br> 1   Pclass    891 non-null    int64   チケットクラス<br> 2   Name      891 non-null    object      乗客の名前<br> 3   Sex       891 non-null    object    （male=男性、female＝女性）<br> 4   Age       714 non-null    float64   年齢<br> 5   SibSp     891 non-null    int64    タイタニックに同乗している兄弟/配偶者の数<br> 6   Parch     891 non-null    int64    タイタニックに同乗している親/子供の数<br> 7   Ticket    891 non-null    object   チケット番号<br> 8   Fare      891 non-null    float64  料金<br> 9   Cabin     204 non-null    object   客室番号<br> 10  Embarked  889 non-null    object    出港地（タイタニックへ乗った港）<br>dtypes: float64(2), int64(4), object(5)</p>
+<p>class sklearn.tree.DecisionTreeRegressor (criterion=’mse’, splitter=’best’, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, presort=False)</p>
 </blockquote>
+<p>criterion<br>    mse:使用均方误差mean squared error(MSE)，父节点和叶子节点之间的均方误差的差额将被用来作为 特征选择的标准<br>    回归树的接口score返回的是R平方，并不是MSE</p>
+<p><strong>交差検証（Cross-validation）</strong><br>　汎化精度を高めることが目的。交差検証では，データセットを kk 個に分割し，モデルの訓練と評価を kk 回行います。<br>得られた kk 個の評価値の平均をとった値を最終的なモデルのスコアとして扱います。</p>
+<blockquote>
+<p>1.データを kk 個のブロックに分ける．これを分割（fold）という．<br>2.最初の分割1 を test set，残りの分割2~5 を training set とし，モデルの学習と評価を行う．<br>3.分割2 を test set，残りの分割1, 3~5 を training set として，モデルの学習と評価を行う．<br>4.この過程を，分割3, 4, 5 を test set として繰り返す．<br>5.得られた kk 個の精度の平均値をモデルの評価値とする．<br></p></blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/04/16/ml01_20200416/#more" rel="contents">
+            <a class="btn" href="/2020/04/14/ml01_20200413/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -1265,9 +1301,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -1293,12 +1326,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
 
 
   

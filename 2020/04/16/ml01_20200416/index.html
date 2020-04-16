@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VR, AR, unity, unity3d" />
+  <meta name="keywords" content="AI," />
 
 
 
@@ -98,19 +98,20 @@
 
 
 
-<meta name="description" content="title: 機械学習01_タイタニック号の予測date: 2020-04-16 10:24:33tags: AIcategories: AI  　今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレク">
+<meta name="description" content="今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレクトリを指定/train.csv&quot;)data.head()data.info()   Data columns (total 11 columns)">
+<meta name="keywords" content="AI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仮想と拡張現実">
+<meta property="og:title" content="機械学習01_タイタニック号の予測">
 <meta property="og:url" content="http://www.jlsgkid.com/2020/04/16/ml01_20200416/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
-<meta property="og:description" content="title: 機械学習01_タイタニック号の予測date: 2020-04-16 10:24:33tags: AIcategories: AI  　今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレク">
+<meta property="og:description" content="今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレクトリを指定/train.csv&quot;)data.head()data.info()   Data columns (total 11 columns)">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cuY29kZXhhLm5ldC93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8xMS9vdXRwdXRfMS5wbmc?x-oss-process=image/format,png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200416123745718.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70 =400x280">
-<meta property="og:updated_time" content="2020-04-16T06:29:17.765Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200416123745718.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-04-16T06:37:33.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仮想と拡張現実">
-<meta name="twitter:description" content="title: 機械学習01_タイタニック号の予測date: 2020-04-16 10:24:33tags: AIcategories: AI  　今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレク">
+<meta name="twitter:title" content="機械学習01_タイタニック号の予測">
+<meta name="twitter:description" content="今回は決定木でタイタニック号で生き残るのは誰という予測です。  タイタニック号からの機械学習  タイタニック号：災害からの機械学習 １、まずはデータセットを導入して、データを見てみましょう 123data = pd.read_csv(&quot;../ディレクトリを指定/train.csv&quot;)data.head()data.info()   Data columns (total 11 columns)">
 <meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cuY29kZXhhLm5ldC93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8xMS9vdXRwdXRfMS5wbmc?x-oss-process=image/format,png">
 
 
@@ -146,7 +147,7 @@
 
 
 
-  <title> | 仮想と拡張現実</title>
+  <title>機械学習01_タイタニック号の予測 | 仮想と拡張現実</title>
   
 
 
@@ -286,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">機械学習01_タイタニック号の予測</h1>
         
 
         <div class="post-meta">
@@ -298,7 +299,7 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T15:28:57+09:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T10:24:33+09:00">
                 2020-04-16
               </time>
             
@@ -309,6 +310,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -316,7 +339,7 @@
 
           
           
-             <span id="/2020/04/16/ml01_20200416/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2020/04/16/ml01_20200416/" class="leancloud_visitors" data-flag-title="機械学習01_タイタニック号の予測">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,9 +370,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><hr>
-<p>title: 機械学習01_タイタニック号の予測<br>date: 2020-04-16 10:24:33<br>tags: AI<br>categories: AI</p>
-<blockquote>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><blockquote>
 <p>　今回は決定木でタイタニック号で生き残るのは誰という予測です。</p>
 </blockquote>
 <p><strong>タイタニック号からの機械学習</strong> </p>
@@ -375,7 +396,7 @@
 <p>ソースコードは：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier </div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split </div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV </div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score </div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> pl</div><div class="line"></div><div class="line">data = pd.read_csv(r<span class="string">"day08_data.csv"</span>,index_col = <span class="number">0</span>)</div><div class="line"></div><div class="line">def kesson_table(df): </div><div class="line">        null_val = df.isnull().sum()</div><div class="line">        percent = <span class="number">100</span> * df.isnull().sum()/len(df)</div><div class="line">        kesson_table = pd.concat([null_val, percent], axis=<span class="number">1</span>)</div><div class="line">        kesson_table_ren_columns = kesson_table.rename(</div><div class="line">        columns = &#123;<span class="number">0</span> : <span class="string">'欠損数'</span>, <span class="number">1</span> : <span class="string">'%'</span>&#125;)</div><div class="line">        <span class="keyword">return</span> kesson_table_ren_columns</div><div class="line"> </div><div class="line">kesson_table(data)</div><div class="line"></div><div class="line">data.drop([<span class="string">"Cabin"</span>,<span class="string">"Name"</span>,<span class="string">"Ticket"</span>],inplace=True,axis=<span class="number">1</span>)</div><div class="line">data[<span class="string">"Age"</span>] = data[<span class="string">"Age"</span>].fillna(data[<span class="string">"Age"</span>].mean())</div><div class="line">data[<span class="string">"Embarked"</span>] = data[<span class="string">"Embarked"</span>].fillna(<span class="string">"S"</span>)</div><div class="line">data = data.dropna()</div><div class="line"></div><div class="line">data[<span class="string">"Sex"</span>] = (data[<span class="string">"Sex"</span>]== <span class="string">"male"</span>).astype(<span class="string">"int"</span>)</div><div class="line">labels = data[<span class="string">"Embarked"</span>].unique().tolist()</div><div class="line">data[<span class="string">"Embarked"</span>] = data[<span class="string">"Embarked"</span>].apply(lambda x: labels.index(x))</div><div class="line"></div><div class="line">#Data</div><div class="line">X = data.iloc[:,data.columns != <span class="string">"Survived"</span>] </div><div class="line">y = data.iloc[:,data.columns == <span class="string">"Survived"</span>]</div><div class="line"></div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line">Xtrain, Xtest, Ytrain, Ytest = train_test_split(X,y,test_size=<span class="number">0.3</span>)</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> Xtrain, Xtest, Ytrain, <span class="attr">Ytest</span>:</div><div class="line">    i.index = range(i.shape[<span class="number">0</span>])</div><div class="line">    </div><div class="line">#data training</div><div class="line">clf = tree.DecisionTreeClassifier(random_state=<span class="number">30</span>)</div><div class="line">clf.fit(Xtrain,Ytrain)</div><div class="line"></div><div class="line">score = clf.score(Xtest,Ytest)</div><div class="line">score</div></pre></td></tr></table></figure></p>
 <p>残念なのはテストした結果スコアは0.746268656716418しかなかったです。<br>何か引数や調整する必要があると考えていますね。</p>
 <p>では各max_depthを設定してスコアを見てみましょう。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">tr = [] </div><div class="line">te = []</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):    </div><div class="line">    clf = tree.DecisionTreeClassifier(random_state=<span class="number">30</span>                              </div><div class="line">                                 ,max_depth=i+<span class="number">1</span>                                </div><div class="line">                                 ,criterion=<span class="string">"entropy"</span>                                </div><div class="line">                                )    </div><div class="line">    clf = clf.fit(Xtrain, Ytrain)    </div><div class="line">    score_tr = clf.score(Xtrain,Ytrain)</div><div class="line">    score_te = cross_val_score(clf,X,y,cv=<span class="number">10</span>).mean()    </div><div class="line">    tr.append(score_tr)    </div><div class="line">    te.append(score_te)</div><div class="line">print(max(te)) </div><div class="line">plt.plot(range(<span class="number">1</span>,<span class="number">11</span>),tr,color=<span class="string">"red"</span>,label=<span class="string">"train"</span>)</div><div class="line">plt.plot(range(<span class="number">1</span>,<span class="number">11</span>),te,color=<span class="string">"blue"</span>,label=<span class="string">"test"</span>) </div><div class="line">plt.xticks(range(<span class="number">1</span>,<span class="number">11</span>)) </div><div class="line">plt.legend() </div><div class="line">plt.show()</div></pre></td></tr></table></figure></p>
-<p><img src="https://img-blog.csdnimg.cn/20200416123745718.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70 =400x280" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200416123745718.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70" alt=""></p>
 <p>図面から見ると、やはりmax_depth=3の時、訓練スコアとテストスコアは一番近いですね。他の引数もこのようにテストして一番最適な値を選びましょう！</p>
 <p>勉強しているところ、scikit-learnにはハイパーパラメータ探索用のGridSearchCVがあって、これを利用して探索リストを渡すと全部試してスコアを返してくれるということです。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </div><div class="line"></div><div class="line">gini_thresholds = np.linspace(<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">20</span>)</div><div class="line">parameters = &#123;<span class="string">'splitter'</span>:(<span class="string">'best'</span>,<span class="string">'random'</span>)              </div><div class="line">,<span class="string">'criterion'</span>:(<span class="string">"gini"</span>,<span class="string">"entropy"</span>)              </div><div class="line">,<span class="string">"max_depth"</span>:[*range(<span class="number">1</span>,<span class="number">10</span>)]              </div><div class="line">,<span class="string">'min_samples_leaf'</span>:[*range(<span class="number">1</span>,<span class="number">50</span>,<span class="number">5</span>)]             </div><div class="line"> ,<span class="string">'min_impurity_decrease'</span>:[*np.linspace(<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">20</span>)]             </div><div class="line"> &#125;</div><div class="line"> </div><div class="line">clf = DecisionTreeClassifier(random_state=<span class="number">25</span>) </div><div class="line">GS = GridSearchCV(clf, parameters, cv=<span class="number">10</span>) GS.fit(Xtrain,Ytrain)</div><div class="line"> </div><div class="line">GS.best_params_</div><div class="line">GS.best_score_</div></pre></td></tr></table></figure></p>
 <p><strong>決定木のまとめ</strong></p>
@@ -401,6 +422,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+        </div>
+      
 
       
       
@@ -410,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/10/ml01_20200410/" rel="next" title="機械学習01_決定木の分類木">
-                <i class="fa fa-chevron-left"></i> 機械学習01_決定木の分類木
+              <a href="/2020/04/14/ml01_20200413/" rel="next" title="機械学習01_決定木の回帰木">
+                <i class="fa fa-chevron-left"></i> 機械学習01_決定木の回帰木
               </a>
             
           </div>
@@ -419,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/16/ml01_20200413/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -701,9 +724,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -729,12 +749,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
 
 
   
