@@ -4,51 +4,11 @@
 
     
   <url>
-    <loc>http://www.jlsgkid.com/2018/06/23/GmPtn01/</loc>
-    <lastmod>2020-04-16T07:05:14.519Z</lastmod>
-    <data>
-        <display>
-        <title>デザインパターン01一Singleton × C#のジェネリック</title>
-        <pubTime>2018-06-23T03:30:22.000Z</pubTime>
-        
-        <tag>unity3d</tag>
-         
-         
-           
-             
-              <breadCrumb title="unity3d" url="http://www.jlsgkid.com/categories/unity3d/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jlsgkid.com/2020/04/14/ml01_20200413/</loc>
-    <lastmod>2020-04-16T06:38:41.525Z</lastmod>
-    <data>
-        <display>
-        <title>機械学習01_決定木の回帰木</title>
-        <pubTime>2020-04-14T04:51:03.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://www.jlsgkid.com/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.jlsgkid.com/2020/04/16/ml01_20200416/</loc>
-    <lastmod>2020-04-16T06:37:33.053Z</lastmod>
+    <lastmod>2020-04-16T07:20:42.916Z</lastmod>
     <data>
         <display>
-        <title>機械学習01_タイタニック号の予測</title>
+        <title>機械学習01-タイタニック号の予測</title>
         <pubTime>2020-04-16T01:24:33.000Z</pubTime>
         
         <tag>AI</tag>
@@ -64,11 +24,31 @@
 
     
   <url>
-    <loc>http://www.jlsgkid.com/2020/04/10/ml01_20200410/</loc>
-    <lastmod>2020-04-16T06:34:21.995Z</lastmod>
+    <loc>http://www.jlsgkid.com/2020/04/14/ml01_20200413/</loc>
+    <lastmod>2020-04-16T07:20:32.811Z</lastmod>
     <data>
         <display>
-        <title>機械学習01_決定木の分類木</title>
+        <title>機械学習01-決定木の回帰木</title>
+        <pubTime>2020-04-14T04:51:03.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://www.jlsgkid.com/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jlsgkid.com/2020/04/10/ml01_20200410/</loc>
+    <lastmod>2020-04-16T07:20:22.769Z</lastmod>
+    <data>
+        <display>
+        <title>機械学習01-決定木の分類木</title>
         <pubTime>2020-04-10T11:31:16.000Z</pubTime>
         
         <tag>AI</tag>
@@ -77,6 +57,26 @@
            
              
               <breadCrumb title="AI" url="http://www.jlsgkid.com/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jlsgkid.com/2018/06/23/GmPtn01/</loc>
+    <lastmod>2020-04-16T07:05:14.519Z</lastmod>
+    <data>
+        <display>
+        <title>デザインパターン01一Singleton × C#のジェネリック</title>
+        <pubTime>2018-06-23T03:30:22.000Z</pubTime>
+        
+        <tag>unity3d</tag>
+         
+         
+           
+             
+              <breadCrumb title="unity3d" url="http://www.jlsgkid.com/categories/unity3d/"/>
           
         </display>
     </data>
