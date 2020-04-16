@@ -98,20 +98,18 @@
 
 
 
-<meta name="description" content="大変お久しぶり。この前、Unity認定試験とか準備のため時間かかりました。無事合格しましたが、点数はまあまあです。。。やはり基礎は大事ですね。まあ、今日はUnityで一番よく使われ、基本的なオブジェクトの移動と回転につて、まとめたいと思います！シーンの中ですべてのオブジェクトが持っているコンポーネントはTransformですね。先ずは移動です。方法は大体五つがあります：    1.Transfor">
+<meta name="description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
 <meta name="keywords" content="unity3d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="オブジェクト移動と回転方法のまとめ">
-<meta property="og:url" content="http://www.jlsgkid.com/2017/11/20/U01/index.html">
+<meta property="og:title" content="デザインパターン01一Singleton × C#のジェネリック">
+<meta property="og:url" content="http://www.jlsgkid.com/2018/06/23/GmPtn01/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
-<meta property="og:description" content="大変お久しぶり。この前、Unity認定試験とか準備のため時間かかりました。無事合格しましたが、点数はまあまあです。。。やはり基礎は大事ですね。まあ、今日はUnityで一番よく使われ、基本的なオブジェクトの移動と回転につて、まとめたいと思います！シーンの中ですべてのオブジェクトが持っているコンポーネントはTransformですね。先ずは移動です。方法は大体五つがあります：    1.Transfor">
+<meta property="og:description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shop_0761/20150704/20150704121557.gif">
-<meta property="og:updated_time" content="2017-12-08T08:01:33.974Z">
+<meta property="og:updated_time" content="2020-04-16T07:05:14.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="オブジェクト移動と回転方法のまとめ">
-<meta name="twitter:description" content="大変お久しぶり。この前、Unity認定試験とか準備のため時間かかりました。無事合格しましたが、点数はまあまあです。。。やはり基礎は大事ですね。まあ、今日はUnityで一番よく使われ、基本的なオブジェクトの移動と回転につて、まとめたいと思います！シーンの中ですべてのオブジェクトが持っているコンポーネントはTransformですね。先ずは移動です。方法は大体五つがあります：    1.Transfor">
-<meta name="twitter:image" content="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shop_0761/20150704/20150704121557.gif">
+<meta name="twitter:title" content="デザインパターン01一Singleton × C#のジェネリック">
+<meta name="twitter:description" content="Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペ">
 
 
 
@@ -140,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/2017/11/20/U01/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2018/06/23/GmPtn01/"/>
 
 
 
 
 
-  <title>オブジェクト移動と回転方法のまとめ | 仮想と拡張現実</title>
+  <title>デザインパターン01一Singleton × C#のジェネリック | 仮想と拡張現実</title>
   
 
 
@@ -269,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/11/20/U01/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2018/06/23/GmPtn01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -286,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">オブジェクト移動と回転方法のまとめ</h1>
+          <h1 class="post-title" itemprop="name headline">デザインパターン01一Singleton × C#のジェネリック</h1>
         
 
         <div class="post-meta">
@@ -298,8 +296,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-20T23:48:55+09:00">
-                2017-11-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-23T12:30:22+09:00">
+                2018-06-23
               </time>
             
 
@@ -338,7 +336,7 @@
 
           
           
-             <span id="/2017/11/20/U01/" class="leancloud_visitors" data-flag-title="オブジェクト移動と回転方法のまとめ">
+             <span id="/2018/06/23/GmPtn01/" class="leancloud_visitors" data-flag-title="デザインパターン01一Singleton × C#のジェネリック">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -369,33 +367,19 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>大変お久しぶり。<br>この前、Unity認定試験とか準備のため時間かかりました。無事合格しましたが、点数はまあまあです。。。やはり基礎は大事ですね。<br>まあ、今日はUnityで一番よく使われ、基本的なオブジェクトの移動と回転につて、まとめたいと思います！<br>シーンの中ですべてのオブジェクトが持っているコンポーネントはTransformですね。先ずは移動です。方法は大体五つがあります：<br>    1.<strong>Transform</strong>を使って移動する<br>    2.<strong>Rigidbody</strong>を使って移動する<br>    3.<strong>CharactorController</strong>を使った移動<br>    4.<strong>Vector３</strong>を使って移動する<br>    5.<strong>NavMeshを</strong>使って移動する<br>      `<br>    <a id="more"></a><br>    <strong>Transformを使って移動する</strong><br>    <strong>1.transform.positionを書き換える</strong><br>オブジェクトのトランスフォーム座標情報を書き換えるため、他のオブジェクトトの衝突判定をすり抜けやすいです。ワープ現象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">void Update() &#123;</div><div class="line"> フレーム単位でｘ軸にて１速度で移動する。</div><div class="line">　transform.position += new Vector3 (1, 0, 0);</div><div class="line">　時間単位で</div><div class="line">　transform.position += transform.forward * speed * Time.deltaTime;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>transform.positionはオブジェクトのワールド座標であり、transform.forwardは自身ローカル座標は相対ワールド座標での前方向ですね。<br><strong>2.transform.Translate</strong><br>public void Translate(Vector3 translation, Space relativeTo = Space.Self);<br>移動は Transform のローカル軸/ワールド軸で移動する。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">transform.Translate (0, 0, 3); </div><div class="line">transform.Translate(Vector3.forward * Time.deltaTime);</div><div class="line">transform.Translate(Vector3.up * Time.deltaTime, Space.World);</div></pre></td></tr></table></figure></p>
-<p><strong>Rigidbodyを使って移動する</strong><br>Rigidbodyコンポーネントをアタッチしておく必要があります。<br><strong>Rigidbody.AddForceを使って移動する</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">void Update()&#123;</div><div class="line">	float x = Input.GetAxis(&quot;Horizontal&quot;) * speed;</div><div class="line">	float z = Input.GetAxis(&quot;Vertical&quot;) * speed;</div><div class="line">&#125;</div><div class="line">void FixedUpdate()&#123;</div><div class="line">	rigidbody.AddForce(x , 0 , z);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>Rigidbody.velocityを書き換えて移動する</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rigidbody.velocity = new Vector3(x, 0, x);</div></pre></td></tr></table></figure>
-<p>Rigidbody の interpolation （補間）設定にしたがって、Rigidbody.MovePosition も使えるようになります。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rigidbody.MovePosition(transform.position + transform.forward * Time.deltaTime);</div></pre></td></tr></table></figure>
-<p>CharactorControllerをアタッチします。重力が無効です。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//SimpleMoveメソッド使う(重力自動適用)</div><div class="line"> void Update() &#123;</div><div class="line">      moveX = Input.GetAxis (&quot;Horizontal&quot;) * speed;</div><div class="line">      moveZ = Input.GetAxis (&quot;Vertical&quot;) * speed;</div><div class="line">	　controller.SimpleMove(direction);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//Moveメソッド使う</div><div class="line">	public float speed = 3.0f;</div><div class="line">	public float gravity = 9.81f;</div><div class="line"></div><div class="line">	private Vector3 moveDirection = Vector3.zero;</div><div class="line"></div><div class="line">	CharacterController controller;</div><div class="line"></div><div class="line">	void Start()&#123;</div><div class="line">		controller = GetComponent&lt;CharacterController&gt;();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	void Update() &#123;</div><div class="line">		if (controller.isGrounded) &#123;</div><div class="line">			moveDirection = new Vector3(Input.GetAxis(&quot;Horizontal&quot;), 0, Input.GetAxis(&quot;Vertical&quot;));</div><div class="line">			moveDirection = transform.TransformDirection(moveDirection);</div><div class="line">			moveDirection *= speed;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		moveDirection.y -= gravity * Time.deltaTime;</div><div class="line">		controller.Move(moveDirection * Time.deltaTime);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p><strong>Vectorを使った移動方法</strong><br><strong>MoveTowards</strong><br>public static Vector3 MoveTowards(Vector3 current,<br>Vector3 target, float maxDistanceDelta);<br>現在の位置 current から target に向けて移動します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">void Update()&#123;</div><div class="line">	transform.position = Vector3.MoveTowards(transform.position, target.position, step);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>Vector3.Lerp / Vector3.Slerp</strong><br>指定した位置まで滑らかに移動させてくれる</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime);</div></pre></td></tr></table></figure>
-<p><strong>回転</strong><br>回転方法の分類<br>参考：<a href="http://tama-lab.net/2017/06/unity%E3%81%A7%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%BE%E3%81%A8%E3%82%81/" target="_blank" rel="external">Unityでオブジェクトを回転させる方法まとめ</a></p>
-<p><strong>指定した角度までなめらかに回転させたい時に便利な方法</strong><br>    Mathf.LerpAngleを使って回転する<br>    Quaternion.LookRotationを使って回転する<br>    Quaternion.RotateTowardsを使って回転する<br>    Vector3.RotateTowardsを使って回転する<br>    Quaternion.Slerpを使って回転する<br><strong>指定した角度まで一気に回転させたい時に便利な方法</strong><br>    Quaternion.AngleAxisを使って回転する<br>    Quaternion.Eulerを使って回転する<br>    Quaternion.eulerAnglesを使って回転する<br>    transform.eulerAnglesを使って回転する</p>
-<p>Transformのオイラー角(Vector3 eulerAngles)を書き換える。<br><strong>transform.eulerAngles</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">float minAngle = 0.0f;</div><div class="line">float maxAngle = 90.0f;</div><div class="line">void Update() &#123;</div><div class="line">	float angle = Mathf.LerpAngle(minAngle, maxAngle, Time.time);</div><div class="line">	transform.eulerAngles = new Vector3(0, angle, 0);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>Transform.Rotate</strong>という方法はずっと回転ほしい場合使う<br>public void Rotate(Vector3 eulerAngles, Space relativeTo = Space.Self);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> void Update() &#123;</div><div class="line">    // ワールドのy軸に沿って1秒間に90度回転</div><div class="line">    transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime, Space.World);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>public static Quaternion LookRotation(Vector3 forward, Vector3 upwards = Vector3.up);<br>Quaternion.Slerpと併用して、なめらかに敵の方を向かせる処理などに使われる例が多い。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">void Update()&#123;</div><div class="line">	Quaternion targetRotation = Quaternion.LookRotation(target.positon - transform.position);</div><div class="line">	transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speech);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>Quaternion.Eulerを使います。</strong><br>public static Quaternion Euler(float x, float y, float z);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">void Update () &#123;</div><div class="line">	transform.rotation = Quaternion.Euler(0, 90f, 0); </div><div class="line">	//Vector3</div><div class="line">	transform.rotation = Quaternion.Euler(new Vector3(0, 90f, 0));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<p>今回終わりです。また次回！</p>
-<p><img src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shop_0761/20150704/20150704121557.gif" alt=""></p>
+        <script src="/assets/js/APlayer.min.js"> </script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><p>Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。<br>つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペでめんどくさくなったんですね。<br>C#にはジェネリック(generics)という便利な機能があります。今回勉強のために、簡単でまとめてみます。<br>サンプル①　オーバーロードを使う時：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">void Save(string key, int value)&#123;&#125;</div><div class="line">void Save(string key, float value)&#123;&#125;</div><div class="line">void Save(string key, string value)&#123;&#125;</div><div class="line">	　　　　　　　↓</div><div class="line">void Save&lt;T&gt;(string key , T value)  where T : Object</div><div class="line">&#123;</div><div class="line">	/*保存処理*/</div><div class="line">&#125;</div><div class="line">//使用例 </div><div class="line">Save&lt;int&gt;(key, &quot;value1&quot;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Tに任意の型を指定する事で、複数の型に対応できるメソッドとなります。<br>もし特殊のタイプだけ対応する時：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">void  Save&lt;T&gt;(string key , T value)  where T : Object</div><div class="line">&#123;</div><div class="line">    if(typeof(T) == typeof(string))&#123;</div><div class="line">     　/*保存処理*/</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ジェネリックの定義</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class クラス名&lt;型引数&gt;</div><div class="line">  where 型引数中の型が満たすべき条件</div><div class="line">&#123;</div><div class="line">  クラス定義</div><div class="line">&#125;</div><div class="line">アクセスレベル 戻り値の型 メソッド名&lt;型引数&gt;(引数リスト)</div><div class="line"> where 型引数中の型が満たすべき条件</div><div class="line">&#123;</div><div class="line">  メソッド定義</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>whereの後には制約条件がある場合、型引数で与えた型に対するメソッド呼び出しなどは出来なくなります。    </p>
+<p>where T : 　struct    型Tは「値型」である<br>where T :　 class    型Tは「参照型」である<br>where T : 　new()    引数なしのコンストラクタを持つ。他の制約条件と同時に課す場合には、一番最後に指定する必要がある。<br>where T : 　[base class]    型Tは[base class]で指定された型を継承する。<br>where T : 　[interface]    型Tは[interface]で指定されたインターフェースを実装する。</p>
+<p>Unityではどうやって使いますか？以下はサンプルコードです。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">public class SingletonMgr&lt;T&gt; : MonoBehaviour where T : MonoBehaviour&#123;</div><div class="line">	private static T _instance;</div><div class="line">	private static bool isAppHasQuit = false;</div><div class="line">	public static T Instance&#123;</div><div class="line">	get &#123;</div><div class="line">		if (isAppHasQuit) &#123;</div><div class="line">			Debug.LogError(&quot;This application has quit!&quot;);</div><div class="line">			return null;</div><div class="line">		&#125;</div><div class="line">		if (_instance == null)&#123;</div><div class="line">			_instance = (T) FindObjectOfType(typeof(T));</div><div class="line">			if ( FindObjectsOfType(typeof(T)).Length &gt; 1 )</div><div class="line">			&#123;</div><div class="line">				Debug.LogError(&quot;More than one instance!&quot;);</div><div class="line">				return _instance;</div><div class="line">			&#125;</div><div class="line">			if(_instance  == null)&#123;</div><div class="line">				//初期化</div><div class="line">				GameObject singleton = new GameObject();</div><div class="line">				_instance = singleton.AddComponent&lt;T&gt;();</div><div class="line">				DontDestroyOnLoad(singleton);</div><div class="line">				Debug.Log(&quot;An instance of &quot; + typeof(T) + </div><div class="line">				&quot;is created in the scene&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return _instance;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//オブジェクトは削除される時の処理</div><div class="line">	public void OnDestroy () &#123;</div><div class="line">		applicationIsQuitting = true;</div><div class="line">	&#125;</div><div class="line">	protected void Awake()&#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//使い方:</div><div class="line">public class AudioManager : SingletonMgr&lt;AudioManager&gt; &#123;</div><div class="line">	public void Awake()</div><div class="line">    &#123;</div><div class="line">        if(this!= Instance)</div><div class="line">        &#123;</div><div class="line">            Destroy(this);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">    &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考：<br><a href="https://www.reddit.com/r/Unity3D/comments/1nb06h/unity_design_patterns_and_concepts_looking_for/" target="_blank" rel="external">Unity design patterns and concepts, looking for good sources</a><br><a href="http://ufcpp.net/study/csharp/oo_reference.html?key=valtype#valtype" target="_blank" rel="external">C#値型と参照型</a><br><a href="http://kan-kikuchi.hatenablog.com/entry/ManagerSceneAutoLoader" target="_blank" rel="external">http://kan-kikuchi.hatenablog.com/entry/ManagerSceneAutoLoader</a><br><a href="http://liangxiegame.com/post/2/" target="_blank" rel="external">单例的模板</a></p>
+<p>だいたいこんな感じですね。<br>次回はFSMにつてちょっと勉強しようと思います。<br><a href="http://blog.csdn.net/jwxkk/article/details/52054625" target="_blank" rel="external">unity3d中使用状态机</a></p>
 
       
     </div>
@@ -426,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/23/FacePlus/" rel="next" title="Face++を利用して簡体字認識アプリの開発">
-                <i class="fa fa-chevron-left"></i> Face++を利用して簡体字認識アプリの開発
+              <a href="/2017/11/20/U01/" rel="next" title="オブジェクト移動と回転方法のまとめ">
+                <i class="fa fa-chevron-left"></i> オブジェクト移動と回転方法のまとめ
               </a>
             
           </div>
@@ -436,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/23/GmPtn01/" rel="prev" title="デザインパターン01一Singleton × C#のジェネリック">
-                デザインパターン01一Singleton × C#のジェネリック <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/10/ml01_20200410/" rel="prev" title="機械学習01_決定木の分類木">
+                機械学習01_決定木の分類木 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
