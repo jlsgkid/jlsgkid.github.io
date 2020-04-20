@@ -264,6 +264,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/14/ml01_20200413/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/14/ml01_20200413/" itemprop="url">機械学習01-決定木の回帰木</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-14T13:51:03+09:00">
+                2020-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/04/14/ml01_20200413/" class="leancloud_visitors" data-flag-title="機械学習01-決定木の回帰木">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>　今回は回帰木を実装しようと思います。</p>
+</blockquote>
+<p><strong>DecisionTreeRegressor</strong> </p>
+<blockquote>
+<p>class sklearn.tree.DecisionTreeRegressor (criterion=’mse’, splitter=’best’, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, presort=False)</p>
+</blockquote>
+<p>criterion<br>    mse:使用均方误差mean squared error(MSE)，父节点和叶子节点之间的均方误差的差额将被用来作为 特征选择的标准<br>    回归树的接口score返回的是R平方，并不是MSE</p>
+<p><strong>交差検証（Cross-validation）</strong><br>　汎化精度を高めることが目的。交差検証では，データセットを kk 個に分割し，モデルの訓練と評価を kk 回行います。<br>得られた kk 個の評価値の平均をとった値を最終的なモデルのスコアとして扱います。</p>
+<blockquote>
+<p>1.データを kk 個のブロックに分ける．これを分割（fold）という．<br>2.最初の分割1 を test set，残りの分割2~5 を training set とし，モデルの学習と評価を行う．<br>3.分割2 を test set，残りの分割1, 3~5 を training set として，モデルの学習と評価を行う．<br>4.この過程を，分割3, 4, 5 を test set として繰り返す．<br>5.得られた kk 個の精度の平均値をモデルの評価値とする．<br></p></blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/ml01_20200413/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/10/ml01_20200410/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -887,164 +1054,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/04/TDGame/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="L.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/timg.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="仮想と拡張現実">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/04/TDGame/" itemprop="url">Making a game in 48 hours -03</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-04T15:31:16+09:00">
-                2017-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/unity3d/" itemprop="url" rel="index">
-                    <span itemprop="name">unity3d</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/04/TDGame/" class="leancloud_visitors" data-flag-title="Making a game in 48 hours -03">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>今回タワー・ディフェンスゲームを作ってみます。<br>迫り来る敵を迎撃し対象を守る「防衛ゲーム」のひとつで、定められた経路を通過する敵を、経路に沿って配置した防御ユニットの攻撃により撃破して通過を阻むというタイプですね。<br>先ずは、全体的にゲームの背景とユニットを配置する場所を作成します。Cubeのコピーですね。Shiftキーを押すと一定値ごとに移動できますね。</p>
-<p>防御ユニットの置き場はこういう感じです：<br><img src="http://img.blog.csdn.net/20170906072214015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/04/TDGame/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1095,7 +1104,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
