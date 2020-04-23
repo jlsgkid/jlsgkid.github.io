@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="derF-RGaJvTgPz8y8_N-O4QzP0WTvRM8H1Mxz7fYTeY" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="true" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="AI," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="今回はsklearnのロジスティク回帰についての勉強です。サンプルは中国ではよくある信用評価制度です。個人情報(データ)をロジスティク回帰で学習と判断、銀行は融資するかしないかの結論を出すという仕組みです。  信用度の評価　信用スコアは中国をはじめとする海外諸国ではすでに浸透しており、個人の信頼性を評価する基準として一般的に使われています。　お金の借り人のさまざまな情報（履歴、年収や人柄など）を">
+<meta name="keywords" content="AI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="機械学習05-ロジスティク回帰による信用度の評価">
+<meta property="og:url" content="http://www.jlsgkid.com/2020/04/23/ml05_20200423/index.html">
+<meta property="og:site_name" content="仮想と拡張現実">
+<meta property="og:description" content="今回はsklearnのロジスティク回帰についての勉強です。サンプルは中国ではよくある信用評価制度です。個人情報(データ)をロジスティク回帰で学習と判断、銀行は融資するかしないかの結論を出すという仕組みです。  信用度の評価　信用スコアは中国をはじめとする海外諸国ではすでに浸透しており、個人の信頼性を評価する基準として一般的に使われています。　お金の借り人のさまざまな情報（履歴、年収や人柄など）を">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200422155434538.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-04-23T07:52:47.058Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="機械学習05-ロジスティク回帰による信用度の評価">
+<meta name="twitter:description" content="今回はsklearnのロジスティク回帰についての勉強です。サンプルは中国ではよくある信用評価制度です。個人情報(データ)をロジスティク回帰で学習と判断、銀行は融資するかしないかの結論を出すという仕組みです。  信用度の評価　信用スコアは中国をはじめとする海外諸国ではすでに浸透しており、個人の信頼性を評価する基準として一般的に使われています。　お金の借り人のさまざまな情報（履歴、年収や人柄など）を">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200422155434538.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '李'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.jlsgkid.com/2020/04/23/ml05_20200423/"/>
+
+
+
+
+
+  <title>機械学習05-ロジスティク回帰による信用度の評価 | 仮想と拡張現実</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">仮想と拡張現実</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">勉強記録 <br/>L.　(李金梁)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            ホーム
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            アーカイブ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            タグ
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/23/ml05_20200423/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">機械学習05-ロジスティク回帰による信用度の評価</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-23T10:28:11+09:00">
+                2020-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/04/23/ml05_20200423/" class="leancloud_visitors" data-flag-title="機械学習05-ロジスティク回帰による信用度の評価">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>今回はsklearnのロジスティク回帰についての勉強です。<br>サンプルは中国ではよくある信用評価制度です。個人情報(データ)をロジスティク回帰で学習と判断、銀行は融資するかしないかの結論を出すという仕組みです。</p>
+</blockquote>
+<p><strong>信用度の評価</strong><br>　信用スコアは中国をはじめとする海外諸国ではすでに浸透しており、個人の信頼性を評価する基準として一般的に使われています。<br>　お金の借り人のさまざまな情報（履歴、年収や人柄など）を収集してスコアリングし、その結果をAIがまとめてスコアを出します。このAIは今回のロジスティク回帰で簡単に実装してみますね。つまり、個人の信頼性を評価するモデルの学習とテストです。</p>
+<p>まずはデータを導入します。</p>
+<blockquote>
+<p>%matplotlib inline<br>import numpy as np<br>import pandas as pd<br>from sklearn.linear_model import LogisticRegression as LR<br>data = pd.read_csv(r”rankingcard.csv”,index_col=0)</p>
+</blockquote>
+<p>ラベルは二値分類（０，１）です。<br><a id="more"></a><br>１、データの前処理<br>data.info()<br>Data columns (total 11 columns):</p>
+<h1 id="Column-Non-Null-Count-Dtype"><a href="#Column-Non-Null-Count-Dtype" class="headerlink" title="Column                                Non-Null Count   Dtype"></a>Column                                Non-Null Count   Dtype</h1><hr>
+<p> 0   SeriousDlqin2yrs                      150000 non-null  int64<br> 1   RevolvingUtilizationOfUnsecuredLines  150000 non-null  float64<br> 2   age                                   150000 non-null  int64<br> 3   NumberOfTime30-59DaysPastDueNotWorse  150000 non-null  int64<br> 4   DebtRatio                             150000 non-null  float64<br> 5   MonthlyIncome                         120269 non-null  float64<br> 6   NumberOfOpenCreditLinesAndLoans       150000 non-null  int64<br> 7   NumberOfTimes90DaysLate               150000 non-null  int64<br> 8   NumberRealEstateLoansOrLines          150000 non-null  int64<br> 9   NumberOfTime60-89DaysPastDueNotWorse  150000 non-null  int64<br> 10  NumberOfDependents                    146076 non-null  float64<br>dtypes: float64(4), int64(7)<br>memory usage: 13.7 MB<br>情報から見ると、欠損データがありますね。</p>
+<p>重複値を削除します。</p>
+<blockquote>
+<p>data.drop_duplicates(inplace=True)</p>
+</blockquote>
+<p>削除終わったら、インデックスをリセットします。</p>
+<blockquote>
+<p>data.index = range(data.shape[0])</p>
+</blockquote>
+<p>欠損値の割合を見てみましょう</p>
+<blockquote>
+<p>data.isnull().mean()</p>
+<p>SeriousDlqin2yrs                        0.000000<br>RevolvingUtilizationOfUnsecuredLines    0.000000<br>age                                     0.000000<br>NumberOfTime30-59DaysPastDueNotWorse    0.000000<br>DebtRatio                               0.000000<br>MonthlyIncome                           0.195601<br>NumberOfOpenCreditLinesAndLoans         0.000000<br>NumberOfTimes90DaysLate                 0.000000<br>NumberRealEstateLoansOrLines            0.000000<br>NumberOfTime60-89DaysPastDueNotWorse    0.000000<br>NumberOfDependents                      0.025624<br>dtype: float64</p>
+</blockquote>
+<p>MonthlyIncomeとNumberOfDependentsのデータを処理必要がありますね。<br>①平均値で埋めます。</p>
+<blockquote>
+<p>data[“NumberOfDependents”].fillna(data[“NumberOfDependents”].mean(), inplace=True)</p>
+</blockquote>
+<p>②前回勉強したランダムフォレストで欠損データを埋めます。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">def fill_misiingdata_rf(X,y,to_fill_name):</div><div class="line">    df = X.copy()</div><div class="line">    fill = df.loc[:,to_fill_name]</div><div class="line">    #Xtrain</div><div class="line">    df = pd.concat([df.loc[:,df.columns!=to_fill_name], </div><div class="line">    	pd.DataFrame(y)], axis=<span class="number">1</span>)</div><div class="line">    </div><div class="line">    Ytrain = fill[fill.notnull()]</div><div class="line">    Ytest = fill[fill.isnull()]</div><div class="line">    Xtrain = df.iloc[Ytrain.index,:]</div><div class="line">    Xtest = df.iloc[Ytest.index,:]</div><div class="line">    </div><div class="line">    <span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor <span class="keyword">as</span> rfr</div><div class="line">    rfr = rfr(n_estimators=<span class="number">100</span>).fit(Xtrain,Ytrain)</div><div class="line">    pf = rfr.predict(Xtest)</div><div class="line">    <span class="keyword">return</span> pf</div><div class="line">    </div><div class="line">#learning data</div><div class="line">x = data.iloc[:,<span class="number">1</span>:]</div><div class="line">#target</div><div class="line">y = data.iloc[:,<span class="number">0</span>]</div><div class="line">yp = fill_misiingdata_rf(x,y,<span class="string">"MonthlyIncome"</span>)</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&gt;data.loc[data.loc[:,&quot;MonthlyIncome&quot;].isnull(), &quot;MonthlyIncome&quot;] = yp</div><div class="line"></div><div class="line">SeriousDlqin2yrs                        0</div><div class="line">RevolvingUtilizationOfUnsecuredLines    0</div><div class="line">age                                     0</div><div class="line">NumberOfTime30-59DaysPastDueNotWorse    0</div><div class="line">DebtRatio                               0</div><div class="line">MonthlyIncome                           0</div><div class="line">NumberOfOpenCreditLinesAndLoans         0</div><div class="line">NumberOfTimes90DaysLate                 0</div><div class="line">NumberRealEstateLoansOrLines            0</div><div class="line">NumberOfTime60-89DaysPastDueNotWorse    0</div><div class="line">NumberOfDependents                      0</div><div class="line">dtype: int64</div><div class="line">欠損データは全部埋めました。</div><div class="line"></div><div class="line">年齢には0以外のデータを対象にします。</div><div class="line">&gt;data = data[data.loc[:, &quot;age&quot;]!=0]</div><div class="line">data = data[data[&quot;age&quot;] != 0]</div><div class="line"></div><div class="line">不均衡なデータの調整</div><div class="line">```javascript</div><div class="line">from imblearn.over_sampling import SMOTE</div><div class="line"></div><div class="line">x = data.iloc[:,1:] </div><div class="line">y = data.iloc[:,0]</div><div class="line">sm = SMOTE(random_state=42) #实例化 </div><div class="line">x,y = sm.fit_sample(x,y)</div><div class="line">n_sample_ = x.shape[0]</div><div class="line">pd.Series(y).value_counts()</div></pre></td></tr></table></figure>
+<p>結果は：<br>1    139292<br>0    139292<br>Name: SeriousDlqin2yrs, dtype: int64<br>各分類のデータ数は同じになりました。</p>
+<p>ではこの中から学習データとテストデータを分けてローカルに保存します。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">X_train, X_vali, Y_train, Y_vali = </div><div class="line">train_test_split(X,y,test_size=<span class="number">0.3</span>,random_state=<span class="number">420</span>)</div><div class="line"></div><div class="line">model_data = pd.concat([Y_train, X_train], axis=<span class="number">1</span>) </div><div class="line">model_data.index = range(model_data.shape[<span class="number">0</span>]) </div><div class="line">model_data.columns = data.columns</div><div class="line"></div><div class="line">vali_data = pd.concat([Y_vali, X_vali], axis=<span class="number">1</span>) </div><div class="line">vali_data.index = range(vali_data.shape[<span class="number">0</span>]) </div><div class="line">vali_data.columns = data.columns</div><div class="line"></div><div class="line">model_data.to_csv(r<span class="string">"model_data.csv"</span>)</div><div class="line">vali_data.to_csv(r<span class="string">"vali_data.csv"</span>)</div></pre></td></tr></table></figure></p>
+<p>ビニング処理をします。いくつか箱（データ容器）を作成します。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#binning</span></div><div class="line">model_data[<span class="string">"qcut"</span>], updown = pd.qcut(model_data[<span class="string">"age"</span>], retbins=<span class="keyword">True</span>, q=<span class="number">20</span>)</div><div class="line">ct_y0 = model_data[model_data[<span class="string">"SeriousDlqin2yrs"</span>] == <span class="number">0</span>].groupby(by=<span class="string">"qcut"</span>).count()[<span class="string">"SeriousDlqin2yrs"</span>]</div><div class="line">ct_y1 = model_data[model_data[<span class="string">"SeriousDlqin2yrs"</span>] == <span class="number">1</span>].groupby(by=<span class="string">"qcut"</span>).count()[<span class="string">"SeriousDlqin2yrs"</span>]</div><div class="line">num_bins = [*zip(updown,updown[<span class="number">1</span>:],ct_y0,ct_y1)]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>[(21.0, 28.0, 4243, 7546),<br> (28.0, 31.0, 3571, 5933),<br>    ….」</p>
+</blockquote>
+<p>WOEとBAD RATEを計算します。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_woe</span><span class="params">(num_bins)</span>:</span></div><div class="line">    columns = [<span class="string">"min"</span>,<span class="string">"max"</span>,<span class="string">"count_0"</span>,<span class="string">"count_1"</span>]</div><div class="line">    df = pd.DataFrame(num_bins,columns=columns)</div><div class="line">    df[<span class="string">"total"</span>] = df.count_0 + df.count_1</div><div class="line">    df[<span class="string">"percentage"</span>] = df.total / df.total.sum()</div><div class="line">    df[<span class="string">"bad_rate"</span>] = df.count_1 / df.total</div><div class="line">    df[<span class="string">"good%"</span>] = df.count_0/df.count_0.sum()</div><div class="line">    df[<span class="string">"bad%"</span>] = df.count_1/df.count_1.sum()</div><div class="line">    df[<span class="string">"woe"</span>] = np.log(df[<span class="string">"good%"</span>] / df[<span class="string">"bad%"</span>]) </div><div class="line">    <span class="keyword">return</span> df</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_iv</span><span class="params">(df)</span>:</span></div><div class="line">    rate = df[<span class="string">"good%"</span>] - df[<span class="string">"bad%"</span>]</div><div class="line">    iv = np.sum(rate * df.woe)</div><div class="line">    <span class="keyword">return</span> iv</div></pre></td></tr></table></figure>
+<p>テスト：get_iv(get_woe(num_bins))</p>
+<p>カイ二乗検定を実行して、関連性高いの箱を結合します。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> scipy</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line">num_bins_ = num_bins.copy()</div><div class="line">axisx = []</div><div class="line">IV = []</div><div class="line"><span class="keyword">while</span> len(num_bins_) &gt; <span class="number">2</span>:  </div><div class="line">    pvs = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(num_bins_)<span class="number">-1</span>):</div><div class="line">        x1 = num_bins_[i][<span class="number">2</span>:]</div><div class="line">        x2 = num_bins_[i+<span class="number">1</span>][<span class="number">2</span>:]</div><div class="line">        pv = scipy.stats.chi2_contingency([x1,x2])[<span class="number">1</span>]</div><div class="line">        pvs.append(pv)</div><div class="line"></div><div class="line">    i=pvs.index(max(pvs))</div><div class="line">    num_bins_[i:i+<span class="number">2</span>]=[(</div><div class="line">        num_bins_[i][<span class="number">0</span>],</div><div class="line">        num_bins_[i+<span class="number">1</span>][<span class="number">1</span>],</div><div class="line">        num_bins_[i][<span class="number">2</span>]+num_bins_[i+<span class="number">1</span>][<span class="number">2</span>],</div><div class="line">        num_bins_[i][<span class="number">3</span>]+num_bins_[i+<span class="number">1</span>][<span class="number">3</span>]</div><div class="line">    )]</div><div class="line"></div><div class="line">    bins_df = get_woe(num_bins_)</div><div class="line">    axisx.append(len(num_bins_))</div><div class="line">    IV.append(get_iv(bins_df))</div><div class="line"></div><div class="line">plt.figure()</div><div class="line">plt.plot(axisx,IV)</div><div class="line">plt.xticks(axisx)</div><div class="line">plt.xlabel(<span class="string">"number of box"</span>)</div><div class="line">plt.ylabel(<span class="string">"IV"</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200422155434538.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70" alt=""><br>図面から見ると、num<em>bins</em>箱の数=6の時、IV（特徴量の貢献度）が高いです。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/21/ml04_20200421/" rel="next" title="機械学習04-PCAによる次元削減と画像認識">
+                <i class="fa fa-chevron-left"></i> 機械学習04-PCAによる次元削減と画像認識
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/timg.jpg"
+               alt="L." />
+          <p class="site-author-name" itemprop="name">L.</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">ポスト</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">カテゴリ</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">タグ</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jlsgkid/" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://pixiv.me/jlsgkid" target="_blank" title="Pixiv">
+                  
+                    <i class="fa fa-fw fa-paint-brush"></i>
+                  
+                    
+                      Pixiv
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/jlsgkid" target="_blank" title="CSDN Blog">
+                  
+                    <i class="fa fa-fw fa-podcast"></i>
+                  
+                    
+                      CSDN Blog
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="jlsgkid704@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Friend links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.bilibili.com" title="Bilibili" target="_blank">Bilibili</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Column-Non-Null-Count-Dtype"><span class="nav-number">1.</span> <span class="nav-text">Column                                Non-Null Count   Dtype</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Number of visitors: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">L.</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("nWnCvy0EL3FvOm4caxtUEeuq-gzGzoHsz", "PIQp5c3UfngVTB92rAyIQaNo");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

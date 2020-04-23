@@ -264,6 +264,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/16/ml01_20200416/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/16/ml01_20200416/" itemprop="url">機械学習01-タイタニック号の予測</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-16T10:24:33+09:00">
+                2020-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/04/16/ml01_20200416/" class="leancloud_visitors" data-flag-title="機械学習01-タイタニック号の予測">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>　今回は決定木でタイタニック号で生き残るのは誰という予測です。</p>
+</blockquote>
+<p><strong>タイタニック号からの機械学習</strong> </p>
+<p><a href="https://www.kaggle.com/c/titanic" target="_blank" rel="external">タイタニック号：災害からの機械学習</a></p>
+<p>１、まずはデータセットを導入して、データを見てみましょう</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data = pd.read_csv(<span class="string">"../ディレクトリを指定/train.csv"</span>)</div><div class="line">data.head()</div><div class="line">data.info()</div></pre></td></tr></table></figure>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly93d3cuY29kZXhhLm5ldC93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8xMS9vdXRwdXRfMS5wbmc?x-oss-process=image/format,png" alt=""></p>
+<blockquote>
+<p>Data columns (total 11 columns):<br> 0   Survived  891 non-null    int64   生存フラグ（0=死亡、1=生存）<br> 1   Pclass    891 non-null    int64   チケットクラス<br> 2   Name      891 non-null    object      乗客の名前<br> 3   Sex       891 non-null    object    （male=男性、female＝女性）<br> 4   Age       714 non-null    float64   年齢<br> 5   SibSp     891 non-null    int64    タイタニックに同乗している兄弟/配偶者の数<br> 6   Parch     891 non-null    int64    タイタニックに同乗している親/子供の数<br> 7   Ticket    891 non-null    object   チケット番号<br> 8   Fare      891 non-null    float64  料金<br> 9   Cabin     204 non-null    object   客室番号<br> 10  Embarked  889 non-null    object    出港地（タイタニックへ乗った港）<br>dtypes: float64(2), int64(4), object(5)</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/16/ml01_20200416/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/14/ml01_20200413/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -896,164 +1063,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2017/09/23/FacePlus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="L.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/timg.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="仮想と拡張現実">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/23/FacePlus/" itemprop="url">Face++を利用して簡体字認識アプリの開発</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-23T21:50:23+09:00">
-                2017-09-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/unity3d/" itemprop="url" rel="index">
-                    <span itemprop="name">unity3d</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/23/FacePlus/" class="leancloud_visitors" data-flag-title="Face++を利用して簡体字認識アプリの開発">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>こんにちは、今回中国の旷视というメーカーから提供しているFace++というサービスを利用して写真中での「簡体字」を認識するアプリを作ってみました！<br><a href="https://www.faceplusplus.com.cn" target="_blank" rel="external">https://www.faceplusplus.com.cn</a></p>
-<p>機能としては、先ず簡体字がある写真を撮るかスマホの<br>アルバムから取ってFace++のサーバーにアップロードして「テキスト認識」というサービスを使って認識される文字列がjsonで返されてクライアントで解析します。<br><img src="http://img.blog.csdn.net/20170927071845108?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/23/FacePlus/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1104,7 +1113,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
