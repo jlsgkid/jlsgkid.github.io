@@ -372,7 +372,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>今回ボードゲー - 五目並べ(禁手なし)を作ってみました。<br>縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><p>今回ボードゲー - 五目並べ(禁手なし)を作ってみました。<br>縦・横・斜めのいずれかに先に五つ連ねた方を勝ちというゲームですね。今回簡単なAIもやってみました。</p>
 <p>対戦モードが二つがあります。<br>一人で対戦（AI）<br>二人で対戦：黒（先手）白（後手）</p>
 <p><img src="http://img.blog.csdn.net/20170925072408911?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br><a id="more"></a><br>碁盤（コライダー付け）は14＊14です。計算しやすいために、カメラを（7、7）の位置を移動して、碁盤も移動して左下点の座標は（0、0）にします。<br><img src="http://img.blog.csdn.net/20170925072255570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamxzZ2tpZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>プレイヤーのクラスを作成します。今回はイオ向けですのでInput.GetTouchでタッチしたピクセル座標を取得してCamera.ScreenPointToRayを使って、スクリーンの点を通してカメラからレイを通します。Physics.Raycastを使って、衝突した点の座標を取得する。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Ray ray;</div><div class="line">#if UNITY_EDITOR</div><div class="line">ray = Camera.main.ScreenPointToRay (Input.mousePosition);</div><div class="line">#elif UNITY_IOS</div><div class="line">ray = Camera.main.ScreenPointToRay (Input.GetTouch (0).position);</div><div class="line">#endif</div><div class="line">if(Input.touchCount &gt; 0)&#123;</div><div class="line">	Vector2 fingerPos = Input.GetTouch (0).position;</div><div class="line">	bool isUI = IsPointerOverUIObject(fingerPos);</div><div class="line">	if(isUI == false)&#123;</div><div class="line">		RaycastHit hit;</div><div class="line">		Physics.Raycast (ray, out hit);</div><div class="line">		cb.Play (new int[]&#123;(int)(hit.point.x + 0.5f), (int)(hit.point.y + 0.5f)&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -523,7 +523,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>

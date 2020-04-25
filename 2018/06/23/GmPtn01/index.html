@@ -367,7 +367,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。<br>つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペでめんどくさくなったんですね。<br>C#にはジェネリック(generics)という便利な機能があります。今回勉強のために、簡単でまとめてみます。<br>サンプル①　オーバーロードを使う時：</p>
+        <script src="/assets/js/APlayer.min.js"> </script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><p>Unityでゲームを作ってる時、よく使うのは管理機能としてのマネージャークラスですね、例え：EventManager、GUIManager、AudioManager、PoolManagerなど。これらを作る時、よく使うパターンーはシングルトンです。<br>つまりインスタンスは一つにして、どんなシーンでも呼び出せることを実現させます。でもマネージャークラスの数が多ければ多いほど、同じようなの作るたびにコピペでめんどくさくなったんですね。<br>C#にはジェネリック(generics)という便利な機能があります。今回勉強のために、簡単でまとめてみます。<br>サンプル①　オーバーロードを使う時：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">void Save(string key, int value)&#123;&#125;</div><div class="line">void Save(string key, float value)&#123;&#125;</div><div class="line">void Save(string key, string value)&#123;&#125;</div><div class="line">	　　　　　　　↓</div><div class="line">void Save&lt;T&gt;(string key , T value)  where T : Object</div><div class="line">&#123;</div><div class="line">	/*保存処理*/</div><div class="line">&#125;</div><div class="line">//使用例 </div><div class="line">Save&lt;int&gt;(key, &quot;value1&quot;);</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>Tに任意の型を指定する事で、複数の型に対応できるメソッドとなります。<br>もし特殊のタイプだけ対応する時：</p>
@@ -513,7 +513,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
