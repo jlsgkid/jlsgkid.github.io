@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="anime," />
+  <meta name="keywords" content="AI," />
 
 
 
@@ -98,17 +98,23 @@
 
 
 
-<meta name="keywords" content="anime">
+<meta name="description" content="今回はとても人気で､且つ非常に強力なアルゴリズムSVM( Supoort Vector Machine) を勉強します｡でも数学の部分はとても難しいと思います。。。  SVMSVMとは、基本的には線形回帰(線形識別モデル)を基礎として､より汎化性能を高める為のアプローチを可能にしたアルゴリズムとなります｡ 二値分類(2つのクラスに分ける)問題について考えます｡マージン(margin)最大化と呼ば">
+<meta name="keywords" content="AI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="四月は君の嘘">
-<meta property="og:url" content="http://www.jlsgkid.com/2016/04/01/April/index.html">
+<meta property="og:title" content="機械学習07-SVMの仕組み01">
+<meta property="og:url" content="http://www.jlsgkid.com/2020/04/28/ml07_20200428/index.html">
 <meta property="og:site_name" content="仮想と拡張現実">
+<meta property="og:description" content="今回はとても人気で､且つ非常に強力なアルゴリズムSVM( Supoort Vector Machine) を勉強します｡でも数学の部分はとても難しいと思います。。。  SVMSVMとは、基本的には線形回帰(線形識別モデル)を基礎として､より汎化性能を高める為のアプローチを可能にしたアルゴリズムとなります｡ 二値分類(2つのクラスに分ける)問題について考えます｡マージン(margin)最大化と呼ば">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502367531608&di=b08bae8de85fc28fb9223c6b4ed57512&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fvideo%2F6a%2F6ad767ccf02aff6b7a4c5609d5b0f1ed.jpg">
-<meta property="og:updated_time" content="2017-09-07T00:55:27.586Z">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9rZW55dS1saWZlLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wMi9zdm0yZC5naWY">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200428121113140.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9rZW55dS1saWZlLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC9TVk1fa2VybmVsNC5qcGc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200428161839563.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-04-28T09:12:15.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="四月は君の嘘">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502367531608&di=b08bae8de85fc28fb9223c6b4ed57512&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fvideo%2F6a%2F6ad767ccf02aff6b7a4c5609d5b0f1ed.jpg">
+<meta name="twitter:title" content="機械学習07-SVMの仕組み01">
+<meta name="twitter:description" content="今回はとても人気で､且つ非常に強力なアルゴリズムSVM( Supoort Vector Machine) を勉強します｡でも数学の部分はとても難しいと思います。。。  SVMSVMとは、基本的には線形回帰(線形識別モデル)を基礎として､より汎化性能を高める為のアプローチを可能にしたアルゴリズムとなります｡ 二値分類(2つのクラスに分ける)問題について考えます｡マージン(margin)最大化と呼ば">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9rZW55dS1saWZlLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wMi9zdm0yZC5naWY">
 
 
 
@@ -137,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jlsgkid.com/2016/04/01/April/"/>
+  <link rel="canonical" href="http://www.jlsgkid.com/2020/04/28/ml07_20200428/"/>
 
 
 
 
 
-  <title>四月は君の嘘 | 仮想と拡張現実</title>
+  <title>機械学習07-SVMの仕組み01 | 仮想と拡張現実</title>
   
 
 
@@ -266,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2016/04/01/April/">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/28/ml07_20200428/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L.">
@@ -283,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">四月は君の嘘</h1>
+          <h1 class="post-title" itemprop="name headline">機械学習07-SVMの仕組み01</h1>
         
 
         <div class="post-meta">
@@ -295,8 +301,8 @@
               
                 <span class="post-meta-item-text">投稿日</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-01T04:01:01+09:00">
-                2016-04-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-28T18:10:58+09:00">
+                2020-04-28
               </time>
             
 
@@ -318,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/anime/" itemprop="url" rel="index">
-                    <span itemprop="name">anime</span>
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
                   </a>
                 </span>
 
@@ -335,7 +341,7 @@
 
           
           
-             <span id="/2016/04/01/April/" class="leancloud_visitors" data-flag-title="四月は君の嘘">
+             <span id="/2020/04/28/ml07_20200428/" class="leancloud_visitors" data-flag-title="機械学習07-SVMの仕組み01">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -366,7 +372,17 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><div align="center"><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1502367531608&amp;di=b08bae8de85fc28fb9223c6b4ed57512&amp;imgtype=0&amp;src=http%3A%2F%2Fi2.hdslb.com%2Fvideo%2F6a%2F6ad767ccf02aff6b7a4c5609d5b0f1ed.jpg" alt="April"><br><br><a id="more"></a><br><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo","addition":["https://dplayer.daoapp.io/bilibili?aid=4157142"]}});</script><br>Twitter: jlsgkid<br></div>
+        <link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>今回はとても人気で､且つ非常に強力なアルゴリズムSVM( Supoort Vector Machine) を勉強します｡でも数学の部分はとても難しいと思います。。。</p>
+</blockquote>
+<p><strong>SVM</strong><br>SVMとは、基本的には線形回帰(線形識別モデル)を基礎として､<br>より汎化性能を高める為のアプローチを可能にしたアルゴリズムとなります｡</p>
+<p>二値分類(2つのクラスに分ける)問題について考えます｡<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9rZW55dS1saWZlLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wMi9zdm0yZC5naWY" alt=""><br>マージン(margin)最大化と呼ばれる考えに基づき、主に2値の分類問題に使われますが、<br>計算コストが比較的に大きいです。マージンは境界からもっとも近いベクトル（特徴量も持った点）との距離を表します。<br><a id="more"></a><br>まずはsklearnでマージンと決定境界を描画しましょう。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">X,y = make_blobs(n_samples=<span class="number">50</span>, centers=<span class="number">2</span>, random_state=<span class="number">0</span>,cluster_std=<span class="number">0.6</span>) </div><div class="line">plt.scatter(X[:,<span class="number">0</span>],X[:,<span class="number">1</span>],c=y,s=<span class="number">50</span>,cmap=<span class="string">"rainbow"</span>) </div><div class="line">plt.xticks([]) </div><div class="line">plt.yticks([]) </div><div class="line"><span class="comment">#plt.show()</span></div><div class="line">ax = plt.gca()</div><div class="line">xlim = ax.get_xlim()</div><div class="line">ylim = ax.get_ylim()</div><div class="line">axisx = np.linspace(xlim[<span class="number">0</span>],xlim[<span class="number">1</span>],<span class="number">30</span>) </div><div class="line">axisy = np.linspace(ylim[<span class="number">0</span>],ylim[<span class="number">1</span>],<span class="number">30</span>)</div><div class="line">axisy,axisx = np.meshgrid(axisy,axisx)</div><div class="line"></div><div class="line">xy = np.vstack([axisx.ravel(), axisy.ravel()]).T</div><div class="line">plt.scatter(xy[:,<span class="number">0</span>],xy[:,<span class="number">1</span>],s=<span class="number">2</span>,cmap=<span class="string">"rainbow"</span>)</div><div class="line"></div><div class="line"><span class="comment">#model </span></div><div class="line">clf = SVC(kernel=<span class="string">"linear"</span>).fit(X,y)</div><div class="line">Z = clf.decision_function(xy).reshape(axisx.shape) </div><div class="line"></div><div class="line">ax.contour(axisx,axisy,Z</div><div class="line">           ,colors=<span class="string">"k"</span></div><div class="line">           ,levels=[<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>]<span class="comment">#画三条等高线，分别是Z为-1，Z为0和Z为1的三条线</span></div><div class="line">           ,alpha=<span class="number">0.8</span></div><div class="line">           ,linestyles=[<span class="string">"--"</span>,<span class="string">"-"</span>,<span class="string">"--"</span>])</div><div class="line">ax.set_xlim(xlim) </div><div class="line">ax.set_ylim(ylim)</div></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200428121113140.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70" alt=""><br>三次元の場合は、元のデータを2乗とか3乗とかして，新しい特徴量データとして作り直すことで，非線形の分類が可能になったりします。<br>この高次元空間への拡張のことを写像と言います。<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9rZW55dS1saWZlLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC9TVk1fa2VybmVsNC5qcGc?x-oss-process=image/format,png" alt=""><br>カーネル法と呼ばれるテクニックを用いることで，φの内積の計算をできます。</p>
+<p>各カーネル関数について、どんな機能があるかちょっと勉強します。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </div><div class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap </div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm </div><div class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> make_circles, make_moons, make_blobs,make_classification </div><div class="line"></div><div class="line">n_samples = <span class="number">100</span></div><div class="line">datasets = [ make_moons(n_samples=n_samples, noise=<span class="number">0.2</span>, random_state=<span class="number">0</span>),</div><div class="line">            make_circles(n_samples=n_samples, noise=<span class="number">0.2</span>, factor=<span class="number">0.5</span>, random_state=<span class="number">1</span>),</div><div class="line">            make_blobs(n_samples=n_samples, centers=<span class="number">2</span>, random_state=<span class="number">5</span>),</div><div class="line">            make_classification(n_samples=n_samples,n_features = <span class="number">2</span>,n_informative=<span class="number">2</span>,n_redundant=<span class="number">0</span>, random_state=<span class="number">5</span>)  </div><div class="line">            ]</div><div class="line">Kernel = [<span class="string">"linear"</span>,<span class="string">"poly"</span>,<span class="string">"rbf"</span>,<span class="string">"sigmoid"</span>]</div><div class="line"></div><div class="line"><span class="comment">#draw image</span></div><div class="line">nrows=len(datasets)</div><div class="line">ncols = len(Kernel) + <span class="number">1</span></div><div class="line">fig, axes = plt.subplots(nrows, ncols,figsize=(<span class="number">20</span>,<span class="number">16</span>))</div><div class="line"></div><div class="line"><span class="keyword">for</span> dsIndex, (x, y) <span class="keyword">in</span> enumerate(datasets):</div><div class="line">    pt = axes[dsIndex, <span class="number">0</span>]</div><div class="line">    <span class="keyword">if</span> dsIndex == <span class="number">0</span>:</div><div class="line">        pt.set_title(<span class="string">"Input data"</span>)</div><div class="line">    pt.scatter(x[:,<span class="number">0</span>],x[:,<span class="number">1</span>],c=y,s=<span class="number">50</span>, zorder=<span class="number">10</span>, cmap=plt.cm.Paired,edgecolors=<span class="string">'k'</span>)</div><div class="line">    pt.set_xticks(())</div><div class="line">    pt.set_yticks(())</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> kIndex,kernel <span class="keyword">in</span> enumerate(Kernel):</div><div class="line">        pt = axes[dsIndex, kIndex + <span class="number">1</span>]</div><div class="line">        <span class="keyword">if</span> dsIndex == <span class="number">0</span>:</div><div class="line">            pt.set_title(kernel)</div><div class="line">        <span class="comment">#training</span></div><div class="line">        clf = svm.SVC(kernel=kernel, gamma=<span class="number">2</span>).fit(x, y)</div><div class="line">        score = clf.score(x, y)</div><div class="line">        pt.scatter(x[:,<span class="number">0</span>],x[:,<span class="number">1</span>],c=y, zorder=<span class="number">10</span>, cmap=plt.cm.Paired,edgecolors=<span class="string">'k'</span>)</div><div class="line">        pt.scatter(clf.support_vectors_[:, <span class="number">0</span>], clf.support_vectors_[:, <span class="number">1</span>], s=<span class="number">50</span>,facecolors=<span class="string">'none'</span>, zorder=<span class="number">10</span>, edgecolors=<span class="string">'k'</span>)</div><div class="line">        x_min, x_max = x[:, <span class="number">0</span>].min() - <span class="number">.5</span>, x[:, <span class="number">0</span>].max() + <span class="number">.5</span></div><div class="line">        y_min, y_max = x[:, <span class="number">1</span>].min() - <span class="number">.5</span>, x[:, <span class="number">1</span>].max() + <span class="number">.5</span>      </div><div class="line">        XX, YY = np.mgrid[x_min:x_max:<span class="number">200j</span>, y_min:y_max:<span class="number">200j</span>]</div><div class="line">        Z = clf.decision_function(np.c_[XX.ravel(), YY.ravel()]).reshape(XX.shape)</div><div class="line">        pt.pcolormesh(XX, YY, Z &gt; <span class="number">0</span>, cmap=plt.cm.Paired)</div><div class="line">        pt.contour(XX, YY, Z, colors=[<span class="string">'k'</span>, <span class="string">'k'</span>, <span class="string">'k'</span>], linestyles=[<span class="string">'--'</span>, <span class="string">'-'</span>, <span class="string">'--'</span>],levels=[<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>])</div><div class="line">        pt.set_xticks(())</div><div class="line">        pt.set_yticks(())</div></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200428161839563.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2psc2draWQ=,size_16,color_FFFFFF,t_70" alt=""><br>カーネル法はrbfを設定する場合、結果スコアが一番高いですね。</p>
+<p>Radial Basis Function(放射基底関数)カーネルのあるSVMを学習させるとき、”C”と”gamma”の2つのパラメーターを考慮に入れる必要がある。”C”は全てのSVMカーネルに共通で、誤って分類した訓練データを決定面の単純さに逆らって置き換える。低い値の”C”は決定面を滑らかにし、高い値の”C”はより多くの訓練データを正しく分類しようとする。”gamma”は1つの訓練データをどれほど重要視するかを決める。”gamma”の値が大きいほど、より他のデータが影響を受けて近くなる。</p>
 
       
     </div>
@@ -384,7 +400,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/anime/" rel="tag"># anime</a>
+            <a href="/tags/AI/" rel="tag"># AI</a>
           
         </div>
       
@@ -397,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/30/text/" rel="next" title="Lee">
-                <i class="fa fa-chevron-left"></i> Lee
+              <a href="/2020/04/25/ml06_20200425/" rel="next" title="機械学習06-K-Means法による画像圧縮">
+                <i class="fa fa-chevron-left"></i> 機械学習06-K-Means法による画像圧縮
               </a>
             
           </div>
@@ -406,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/14/CSDN-markdown/" rel="prev" title="「Unity」視錐台についての勉強">
-                「Unity」視錐台についての勉強 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
