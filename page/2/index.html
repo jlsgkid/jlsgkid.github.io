@@ -264,6 +264,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/19/ml03_20200419/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仮想と拡張現実">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/19/ml03_20200419/" itemprop="url">機械学習03-データ前処理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-19T21:19:31+09:00">
+                2020-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/04/19/ml03_20200419/" class="leancloud_visitors" data-flag-title="機械学習03-データ前処理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>モデル学習するためのデータを事前に処理しないといけないです。<br>今回はsklearnのメソッドでデータ前処理を勉強します。</p>
+</blockquote>
+<p><strong>1、データの正規化（数据归一化　Normalization）</strong><br>最小値0、最大値1に正規化するにはMinMaxScalerクラスを使います。MinMaxScalerには重要な引数feature_rangeがあります。正規化したい範囲と定義されて、デフォルトは「０、１」です。</p>
+<p>from sklearn.preprocessing import MinMaxScaler<br>data = [[-1, 2], [-0.5, 6], [0, 10], [1, 18]]<br>s = MinMaxScaler()<br>result= s.fit_transform(data)<br>array([[0.  , 0.  ], [0.25, 0.25],[0.5 , 0.5 ],[1.  , 1.  ]])</p>
+<blockquote>
+<p>scaler = MinMaxScaler(feature_range=[5,10])   </p>
+</blockquote>
+<p>元の配列に戻るなら、s.inverse_transform(result)</p>
+<p><strong>２、データの標準化（数据标准化　Standardization　均值为0，方差为1的正态分）</strong><br>平均0、分散1に標準化するにはStandardScalerクラスまたはscale()関数を使います。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/19/ml03_20200419/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/18/ml02_20200418/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -910,169 +1076,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jlsgkid.com/2020/04/10/ml01_20200410/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="L.">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/timg.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="仮想と拡張現実">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/10/ml01_20200410/" itemprop="url">機械学習01-決定木の分類木</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-10T20:31:16+09:00">
-                2020-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index">
-                    <span itemprop="name">AI</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2020/04/10/ml01_20200410/" class="leancloud_visitors" data-flag-title="機械学習01-決定木の分類木">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>　今日から機械学習の基本知識を復習ながらscikit-learnを利用して勉強し続きます。<br>まずは決定木からですね。</p>
-</blockquote>
-<p><strong>決定木</strong></p>
-<p>　決定木とは木構造を用いて分類や回帰を行う機械学習の手法の一つです。<br>ノンパラメトリックな教師あり学習です。</p>
-<p>　決定木の種類は分類木と回帰木二つがあります。</p>
-<p>　今回はscikit-learnというライブラリを使って決定木を勉強しようと思います。主に使われているアルゴリズムはID3やC4.5，CARTとなります。<br>　<br>　ノード：<br>　ルートノードとリーフノード<br>　<br>　学習ライブラリsklearn.tree：<br>　项目     | 用途<br>——– | —–<br>　tree.DecisionTreeClassiﬁer | 分類木<br>　tree.DecisionTreeRegressor | 回帰木<br>　tree.export_graphviz  | 視覚化処理するため</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/10/ml01_20200410/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1123,7 +1126,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
